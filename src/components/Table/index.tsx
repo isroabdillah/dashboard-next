@@ -6,10 +6,30 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { table } from "console";
+import Badges from "../../components/Badges";
 
-export const Table = () => {
+
+interface IsiData {
+  nama: string;
+  phone: string;
+  userStatus: string;
+  lastLogin: string;
+  message: string;
+  status: string;
+}
+interface Data {
+  name: string;
+}
+
+interface TableProps {
+  header: Data[];
+  isian: IsiData[];
+}
+
+const Table: React.FC<TableProps> = ({ header, isian }) => {
   return (
-    <div className="">
+    <div className="mt-3">
       <div className="sm:px-6 w-full">
         <div className="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10 rounded-lg mb-6">
           <div className="sm:flex items-center justify-between">
@@ -72,163 +92,57 @@ export const Table = () => {
             <table className="w-full whitespace-nowrap">
               <thead>
                 <tr className="focus:outline-none h-16 border border-gray-100 rounded">
-                  <th>
-                    
-                  </th>
-                  <th className="text-left">Receiver</th>
-                  <th className="text-left">User Status</th>
-                  <th className="text-left">Message</th>
-                  <th className="text-left">Status</th>
+                  {header.map((head) => (
+                    <th className="text-left">{head?.name}</th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                <tr className="focus:outline-none h-16 border border-gray-100 rounded">
-                  <td>
-                    <div className="ml-5 bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
-                      <input
-                        placeholder="checkbox"
-                        type="checkbox"
-                        className="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full"
-                      />
-                      <div className="check-icon hidden bg-indigo-700 text-white rounded-sm">
-                        <svg
-                          className="icon icon-tabler icon-tabler-check"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z"></path>
-                          <path d="M5 12l5 5l10 -10"></path>
-                        </svg>
+                {isian.map((isiann) => (
+                  <tr className="focus:outline-none h-16 border border-gray-100 rounded">
+                    <td>
+                      <div className="ml-5 bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                        <input
+                          placeholder="checkbox"
+                          type="checkbox"
+                          className="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                        />
+                        <div className="check-icon hidden bg-indigo-700 text-white rounded-sm">
+                          <svg
+                            className="icon icon-tabler icon-tabler-check"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z"></path>
+                            <path d="M5 12l5 5l10 -10"></path>
+                          </svg>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>isro Abdillah</p>
-                    <span className="text-sm mt-1">089123456789</span>
-                  </td>
-                  <td>
-                    <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
-                      <div className="bg-green-400 w-3 h-3 rounded-full"></div>
-                      Active
-                    </div>
-                    <p className="text-sm mt-1">Last Login : 14/APR/2020</p>
-                  </td>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur
-                  </td>
-                  <td>
-                    <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
-                      <div className="bg-green-400 w-3 h-3 rounded-full"></div>
-                      Terkirim
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr className="focus:outline-none h-16 border border-gray-100 rounded">
-                  <td>
-                    <div className="ml-5 bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
-                      <input
-                        placeholder="checkbox"
-                        type="checkbox"
-                        className="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full"
-                      />
-                      <div className="check-icon hidden bg-indigo-700 text-white rounded-sm">
-                        <svg
-                          className="icon icon-tabler icon-tabler-check"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z"></path>
-                          <path d="M5 12l5 5l10 -10"></path>
-                        </svg>
+                    </td>
+                    <td>
+                      <p>{isiann?.nama}</p>
+                      <span className="text-sm mt-1">{isiann?.phone}</span>
+                    </td>
+                    <td>
+                      <Badges tipe={isiann?.userStatus}/>
+                      <p className="text-sm mt-1">Last Login: {isiann?.lastLogin}</p>
+                    </td>
+                    <td>{isiann?.message}</td>
+                    <td>
+                      <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
+                        <div className="bg-green-400 w-3 h-3 rounded-full"></div>
+                        Terkirim
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>Isro Abdillah</p>
-                    <span className="text-sm mt-1">089123456789</span>
-                  </td>
-                  <td>
-                    <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
-                      <div className="bg-green-400 w-3 h-3 rounded-full"></div>
-                      Active
-                    </div>
-                    <p className="text-sm mt-1">Last Login : 14/APR/2020</p>
-                  </td>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur
-                  </td>
-                  <td>
-                    <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
-                      <div className="bg-green-400 w-3 h-3 rounded-full"></div>
-                      Terkirim
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr className="focus:outline-none h-16 border border-gray-100 rounded">
-                  <td>
-                    <div className="ml-5 bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
-                      <input
-                        placeholder="checkbox"
-                        type="checkbox"
-                        className="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full"
-                      />
-                      <div className="check-icon hidden bg-indigo-700 text-white rounded-sm">
-                        <svg
-                          className="icon icon-tabler icon-tabler-check"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z"></path>
-                          <path d="M5 12l5 5l10 -10"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>Isro Abdillah</p>
-                    <span className="text-sm mt-1">089123456789</span>
-                  </td>
-                  <td>
-                    <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
-                      <div className="bg-green-400 w-3 h-3 rounded-full"></div>
-                      Active
-                    </div>
-                    <p className="text-sm mt-1">Last Login : 14/APR/2020</p>
-                  </td>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur
-                  </td>
-                  <td>
-                    <div className="bg-green-100 inline-flex items-center rounded-xl px-2 text-sm gap-1 text-green-300">
-                      <div className="bg-green-400 w-3 h-3 rounded-full"></div>
-                      Terkirim
-                    </div>
-                  </td>
-                  
-                </tr>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -237,3 +151,5 @@ export const Table = () => {
     </div>
   );
 };
+
+export default Table;

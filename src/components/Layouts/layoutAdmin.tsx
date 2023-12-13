@@ -10,7 +10,7 @@ const LayoutAdmin: React.FC<LayoutAdminProps> = ({ children }) => {
   return (
     <>
       <Sidebar />
-      <main className="ml-64 space-y-14">
+      <main className="ml-64 space-y-6">
         <Topbar />
         {children}
       </main>
