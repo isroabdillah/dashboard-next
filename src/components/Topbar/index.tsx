@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Dropdown } from "../Dropdown";
 
 export const Topbar = () => {
   const [position, setPosition] = useState("bottom");
@@ -91,16 +92,7 @@ export const Topbar = () => {
           </defs>
         </svg>
 
-        <Select>
-          <SelectTrigger className="py-[10px] px-[20px]">
-            <SelectValue placeholder="Arkatama Multisolusindo" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="light">Arkatama Multisolusindo</SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem value="system">System</SelectItem>
-          </SelectContent>
-        </Select>
+        <Dropdown/>
       </div>
     </header>
   );

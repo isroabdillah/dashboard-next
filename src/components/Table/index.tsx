@@ -107,7 +107,7 @@ const Table: React.FC<TableProps> = ({ header, isian }) => {
                           type="checkbox"
                           className="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full"
                         />
-                        <div className="check-icon hidden bg-indigo-700 text-white rounded-sm">
+                        <div className="check-icon hidden bg-red-700 text-white rounded-sm">
                           <svg
                             className="icon icon-tabler icon-tabler-check"
                             xmlns="http://www.w3.org/2000/svg"

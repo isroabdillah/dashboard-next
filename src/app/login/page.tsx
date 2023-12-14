@@ -1,15 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 
 function App() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-md relative">
-        <img
-          src="/ornamen1.png"
+        <Image
           className="absolute -top-16 -right-16"
+          src="/ornamen1.png"
           style={{ zIndex: "-9999" }}
+          width={147}
+          height={262}
+          alt=""
         />
         <div className="w-full p-6 bg-white rounded-lg shadow-lg">
           <div className="flex justify-center mb-8">
