@@ -92,14 +92,14 @@ const Table: React.FC<TableProps> = ({ header, isian }) => {
             <table className="w-full whitespace-nowrap">
               <thead>
                 <tr className="focus:outline-none h-16 border border-gray-100 rounded">
-                  {header.map((head) => (
-                    <th className="text-left">{head?.name}</th>
+                  {header.map((head: any, index: any) => (
+                    <th key={index} className="text-left">{head?.name}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {isian.map((isiann) => (
-                  <tr className="focus:outline-none h-16 border border-gray-100 rounded">
+                {isian.map((isiann : any, index:any) => (
+                  <tr key={index} className="focus:outline-none h-16 border border-gray-100 rounded">
                     <td>
                       <div className="ml-5 bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                         <input
