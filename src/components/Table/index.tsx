@@ -81,9 +81,9 @@ const Table: React.FC<TableProps> = ({ header, isian }) => {
                   <SelectValue placeholder="Tampilkan Semua" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="satu">Tampil satu</SelectItem>
-                  <SelectItem value="dua">Tampil Dua</SelectItem>
-                  <SelectItem value="tiga">Tampil Tiga</SelectItem>
+                  <SelectItem value="satu">Tampilkan 1</SelectItem>
+                  <SelectItem value="dua">Tampilkan 2</SelectItem>
+                  <SelectItem value="tiga">Tampilkan 3</SelectItem>
                 </SelectContent>
               </Select>
             </div>

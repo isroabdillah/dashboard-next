@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 import Image from 'next/image'
 
-export const Navbar = () => {
+export const Navbars = () => {
   return (
     <main className="bg-white">
       <div className="container mx-auto flex items-center h-[90px] border-b-1 border-black px-[110px]">
@@ -24,22 +24,22 @@ export const Navbar = () => {
         </a>
         <nav className="contents text-base lg:text-md">
           <ul className="mx-auto flex items-center gap-[5px]">
-            <li className="py-[10px] px-[20px] rounded-md font-medium border-2 border-[#FF0000] active bg-[#FFDFDF] text-[#FF0000]">
+            <li className="py-[5px] px-[10px] rounded-md font-medium border-2 border-[#FF0000] active bg-[#FFDFDF] text-[#FF0000]">
               Whatsapp
             </li>
-            <li className="py-[10px] px-[20px] rounded-md font-medium text-[#656565] ">
+            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Server Health
             </li>
-            <li className="py-[10px] px-[20px] rounded-md font-medium text-[#656565] ">
+            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Dokumentasi
             </li>
-            <li className="py-[10px] px-[20px] rounded-md font-medium text-[#656565] ">
+            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Youtube Tutorial
             </li>
-            <li className="py-[10px] px-[20px] rounded-md font-medium text-[#656565] ">
+            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Use Case
             </li>
-            <li className="py-[10px] px-[20px] rounded-md font-medium text-[#656565] ">
+            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Kontak CS
             </li>
           </ul>

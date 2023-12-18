@@ -1,21 +1,42 @@
-import React from 'react'
-import Image from 'next/image'
+"use client";
+
+import Button from "@/components/Forms/Button";
+import React from "react";
+import Image from "next/image";
 
 export const Card = () => {
   return (
-<div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div >
-  )
-}
+    <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+      <div
+        className="relative overflow-hidden bg-cover bg-no-repeat"
+        data-te-ripple-init
+        data-te-ripple-color="light"
+      >
+        <img
+          className="rounded-t-lg"
+          src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
+          alt=""
+        />
+        <a href="#!">
+          <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </a>
+      </div>
+      <div className="p-6">
+        <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+          Card title
+        </h5>
+        <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        
+        <Button
+          typeButton="primary"
+          title="Button"  
+          onClickAction={() => console.log('Tombol diklik!')}
+        />
+
+      </div>
+    </div>
+  );
+};
