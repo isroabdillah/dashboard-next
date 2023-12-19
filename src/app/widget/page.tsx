@@ -1,9 +1,15 @@
+
+import Button from '@/components/Buttons'
 import LayoutAdmin from '@/components/Layouts/layoutAdmin'
 import { Widget1 } from '@/components/widget/widget1'
 import { Widget2 } from '@/components/widget/widget2'
 import { Widget3 } from '@/components/widget/widget3'
 import React from 'react'
 
+
+const handleClick = () => {
+  console.log("Tombol diklik!");
+};
 export default function Widget() {
   return (
     <LayoutAdmin>
