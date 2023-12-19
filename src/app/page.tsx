@@ -8,11 +8,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Navbar } from "@/components/Navbar";
+import { Navbars } from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <Navbar/>
+    <Navbars/>
     
   );
 }

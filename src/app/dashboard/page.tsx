@@ -36,8 +36,8 @@ export default function Dashboard() {
       <Table header={column} isian={isi}/>
 
       
-      <Button typeButton="default" title="button" onClickAction={handleCloseAlert}/>
-      <Button typeButton="primary" title="TOAST" onClickAction={notify}/>
+      {/* <Button typeButton="default" title="button" onClickAction={handleCloseAlert}/>
+      <Button typeButton="primary" title="TOAST" onClickAction={notify}/> */}
       <Toaster />
 
       <div className="m-4"></div>

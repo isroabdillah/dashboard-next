@@ -2,8 +2,8 @@ import React from "react";
 
 export const Widget2 = () => {
   return (
-    <div className="col-span-12 sm:col-span-4 w-1/4">
-      <div className="p-4 relative  bg-white border shadow-sm  rounded-2xl">
+    <div className=" md:w-full lg:w-1/2">
+      <div className="p-4 relative  bg-white shadow-sm  rounded-2xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-14 w-14  absolute bottom-4 right-3 text-red-500"

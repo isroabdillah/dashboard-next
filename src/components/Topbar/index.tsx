@@ -13,7 +13,7 @@ export const Topbar = () => {
   const [position, setPosition] = useState("bottom");
 
   return (
-    <header className="bg-white h-16 px-[110px] flex justify-between items-center">
+    <header className="bg-white h-16 px-[110px] hidden lg:flex justify-between items-center">
       <div className="p-4">
         <label htmlFor="table-search" className="sr-only">
           Search

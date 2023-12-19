@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Widget3 = () => {
   return (
-    <div className="flex flex-col p-4 h-full w-1/4 bg-white shadow-sm hover:shodow-lg rounded-2xl">
+    <div className="flex flex-col p-4 h-full lg:w-1/2 bg-white shadow-sm rounded-2xl">
       <div className="flex">
         <Image
           className=" w-16  object-fit  h-16 rounded-2xl"

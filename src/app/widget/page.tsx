@@ -7,7 +7,7 @@ import React from 'react'
 export default function Widget() {
   return (
     <LayoutAdmin>
-      <div className=" flex gap-x-4 mx-4">
+      <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col gap-x-4 mx-4">
         <Widget1/>
         <Widget2/>
         <Widget3/>
