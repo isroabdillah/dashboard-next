@@ -1,5 +1,6 @@
 "use client";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Button from "@/components/Forms/Button";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import React from "react";
@@ -84,6 +85,14 @@ export default function Toast() {
 
   return (
     <LayoutAdmin>
+      <div
+        className="flex flex-col items-start p-[25px] bg-white rounded-lg relative mx-4"
+        id="parent"
+      >
+        <h1 className="text-xl font-medium">Toast</h1>
+        <Breadcrumbs currentPage="Toast" />
+      </div>
+
       <div className="flex gap-x-3 m-4">
         <Button typeButton="primary" title="Toast" onClickAction={notify} />
 
@@ -99,7 +108,11 @@ export default function Toast() {
           onClickAction={error}
         />
 
-        <Button typeButton="primary" title="Error custom" onClickAction={notif} />
+        <Button
+          typeButton="primary"
+          title="Error custom"
+          onClickAction={notif}
+        />
       </div>
 
       <Toaster position="top-right" reverseOrder={false} />

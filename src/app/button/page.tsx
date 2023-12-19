@@ -6,6 +6,7 @@ import { FaHome } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import Buttons from "@/components/Buttons";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const handleClick = () => {
   console.log("Tombol diklik!");
@@ -14,6 +15,14 @@ const handleClick = () => {
 export default function page() {
   return (
     <LayoutAdmin>
+      <div
+        className="flex flex-col items-start p-[25px] bg-white rounded-lg relative mx-4"
+        id="parent"
+      >
+        <h1 className="text-xl font-medium">Button</h1>
+        <Breadcrumbs currentPage="Button" />
+      </div>
+
       <div className="flex flex-wrap gap-4 ml-4">
         <div className=" p-6 bg-white rounded-xl lg:w-fit">
           <h5 className="mb-4 font-regular">Styles</h5>
