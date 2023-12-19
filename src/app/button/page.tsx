@@ -67,7 +67,7 @@ export default function page() {
         </div>
         <div className=" p-6 bg-white rounded-xl lg:w-fit">
           <h5 className="mb-4 font-regular">Button Colors</h5>
-          <div className="flex gap-x-4 ">
+          <div className="flex gap-4  flex-wrap">
             <Buttons
               typeButton="primary"
               title="Primary"

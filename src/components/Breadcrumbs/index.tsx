@@ -3,7 +3,11 @@
 import React from "react";
 import Swal from "sweetalert2";
 
-export const Breadcrumbs = () => {
+type BreadcrumbsProps = {
+  currentPage: string;
+};
+
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentPage }) => {
   const handleClick = () => {
     Swal.fire({
       title: "page dashboard admin",
@@ -62,10 +66,12 @@ export const Breadcrumbs = () => {
             onClick={handleButtonClick}
             className=" hover:text-red-500 text-red-500"
           >
-            Admin
+            {currentPage}
           </a>
         </li>
       </ul>
     </div>
   );
 };
+
+export default Breadcrumbs;

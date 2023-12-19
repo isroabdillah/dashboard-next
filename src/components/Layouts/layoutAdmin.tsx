@@ -1,19 +1,27 @@
-import React, { ReactNode } from 'react';
-import { Sidebar } from '../Sidebar';
-import { Topbar } from '../Topbar';
-import SideNav from '../Sidebar/sidenav';
+"use client";
+
+import React, { ReactNode, useState } from "react";
+import Sidebar from "../Sidebar";
+import Topbar from "../Topbar";
 
 interface LayoutAdminProps {
   children: ReactNode;
 }
 
 const LayoutAdmin: React.FC<LayoutAdminProps> = ({ children }) => {
+  const [collapsed, setSidebarCollapsed] = useState(true);
+
   return (
     <>
-      <Sidebar />
-      {/* <SideNav/> */}
-      <main className="lg:ml-64 space-y-6">
-        <Topbar />
+      <Sidebar
+        collapsed={collapsed}
+        setSidebarCollapsed={setSidebarCollapsed}
+      />
+      <main className="w-full space-y-6">
+        <Topbar
+          collapsed={collapsed}
+          setSidebarCollapsed={setSidebarCollapsed}
+        />
         {children}
       </main>
     </>
