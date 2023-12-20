@@ -13,10 +13,10 @@ export default function Widget() {
   return (
     <LayoutAdmin>
       <div
-        className="flex flex-col items-start p-[25px] bg-white rounded-lg relative mx-4"
+        className="flex flex-col items-start p-[18px] bg-white rounded-lg relative mx-4"
         id="parent"
       >
-        <h1 className="text-xl font-medium">Widget</h1>
+        <h1 className="text-lg font-medium">Widget</h1>
         <Breadcrumbs currentPage="Widget" />
       </div>
       <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col gap-x-4 mx-4">

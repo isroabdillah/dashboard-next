@@ -16,10 +16,10 @@ export default function page() {
   return (
     <LayoutAdmin>
       <div
-        className="flex flex-col items-start p-[25px] bg-white rounded-lg relative mx-4"
+        className="flex flex-col items-start p-[18px] bg-white rounded-lg relative mx-4"
         id="parent"
       >
-        <h1 className="text-xl font-medium">Button</h1>
+        <h1 className="text-lg font-medium">Button</h1>
         <Breadcrumbs currentPage="Button" />
       </div>
 

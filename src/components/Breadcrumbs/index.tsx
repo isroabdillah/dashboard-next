@@ -20,7 +20,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentPage }) => {
   };
 
   return (
-    <div className="bg-white pt-4 flex items-center flex-wrap">
+    <div className="bg-white pt-2 flex items-center flex-wrap">
       <ul className="flex items-center">
         <li className="inline-flex items-center">
           <a href="#" className="text-gray-600 hover:text-blue-500">

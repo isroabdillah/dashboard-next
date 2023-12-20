@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -75,5 +76,42 @@ export const data = {
 };
 
 export function Chart3() {
-  return <Line options={options} data={data} />;
+  return (
+    <div className="w-full bg-white rounded-2xl p-4">
+      <div className="flex justify-between items-center mb-4">
+        <h5 className="text-[14px] text-gray-950 font-semibold">
+          Multiple User
+        </h5>
+
+        <div className="flex gap-1">
+          <div className="flex bg-[#FF5959] bg-opacity-25 p-[3px] rounded-md border-[0.5px] border-[#FF5959]">
+            <Image
+              className="ml-2"
+              src="/dot-c.svg"
+              width={7}
+              height={7}
+              alt="Picture of the author"
+            />
+            <p className="ml-2 mr-2 text-[10px] text-gray-800 font-normal">
+              Sale
+            </p>
+          </div>
+          <div className="flex bg-[#DADADA] bg-opacity-25 p-[3px] rounded-md border-[0.5px] border-[#DADADA]">
+            <Image
+              className="ml-2"
+              src="/dot-c2.svg"
+              width={7}
+              height={7}
+              alt="Picture of the author"
+            />
+            <p className="ml-2 mr-2 text-[10px] text-gray-800 font-normal">
+              Stock
+            </p>
+          </div>
+        </div>
+      </div>
+      <Line options={options} data={data} />
+    </div>
+  )
+  
 }

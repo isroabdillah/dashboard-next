@@ -42,10 +42,10 @@ export default function Dashboard() {
         />
 
         <div
-          className="flex flex-col items-start p-[25px] bg-white rounded-lg relative"
+          className="flex flex-col items-start p-[18px] bg-white rounded-lg relative"
           id="parent"
         >
-          <h1 className="text-xl font-medium">Dashboard</h1>
+          <h1 className="text-lg font-medium">Dashboard</h1>
           <Breadcrumbs currentPage="Admin" />
         </div>
 

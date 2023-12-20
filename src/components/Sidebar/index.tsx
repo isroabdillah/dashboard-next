@@ -37,7 +37,7 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
                 href={menu.url}
                 className={`${
                   params === menu.url
-                    ? "bg-orange-400 rounded-md text-white"
+                    ? "bg-[#FF5959] rounded-md text-white font-normal"
                     : "hover:bg-slate-100"
                 } flex justify-center items-center rounded-lg p-3 text-slate-900  dark:text-white dark:hover:bg-slate-700`}
               >
