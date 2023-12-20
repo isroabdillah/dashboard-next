@@ -17,6 +17,7 @@ type ButtonProps = {
     | "full-primary"
     | "full-success"
     | "full-secondary"
+    | "white"
     | "default";
   onClickAction: () => void;
   icon?: IconType;
@@ -82,20 +83,25 @@ const Buttons: React.FC<ButtonProps> = ({
         "py-4 px-7 from-orange-500 to-orange-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-orange-600";
       break;
 
-      case "full-primary":
-        buttonClass +=
-          "w-full justify-center py-4 from-red-500 to-red-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-red-600";
-        break;
-  
-      case "full-success":
-        buttonClass +=
-          "w-full justify-center py-4 from-emerald-500 to-emerald-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-emerald-600";
-        break;
-  
-      case "full-secondary":
-        buttonClass +=
-          "w-full justify-center py-4 from-orange-500 to-orange-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-orange-600";
-        break;
+    case "full-primary":
+      buttonClass +=
+        "w-full justify-center py-4 from-red-500 to-red-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-red-600";
+      break;
+
+    case "full-success":
+      buttonClass +=
+        "w-full justify-center py-4 from-emerald-500 to-emerald-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-emerald-600";
+      break;
+
+    case "full-secondary":
+      buttonClass +=
+        "w-full justify-center py-4 from-orange-500 to-orange-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-orange-600";
+      break;
+
+    case "white":
+      buttonClass +=
+        "p-2 bg-white rounded-xl text-sm font-semibold text-gray-700 px-6 transform transition-all duration-200 hover:bg-zinc-100 hover:text-gray-800 ";
+      break;
 
     default:
       buttonClass +=
