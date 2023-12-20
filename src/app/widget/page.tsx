@@ -16,32 +16,36 @@ const handleClick = () => {
 export default function Widget() {
   return (
     <LayoutAdmin>
-      <div
-        className="flex flex-col items-start p-[18px] bg-white rounded-lg relative mx-4"
-        id="parent"
-      >
-        <h1 className="text-lg font-medium">Widget</h1>
-        <Breadcrumbs currentPage="Widget" />
-      </div>
+      <div className="px-4 mx-auto">
+        <div
+          className="flex flex-col items-start p-[18px] bg-white rounded-lg relative my-4"
+          id="parent"
+        >
+          <h1 className="text-lg font-medium">Widget</h1>
+          <Breadcrumbs currentPage="Widget" />
+        </div>
 
-      <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col gap-x-4 mx-4">
-        <Widget1 />
-        <div className="flex flex-col lg:w-6/12 gap-y-4">
-          <Widget2 />
-          <Widget3 />
+        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col ">
+          <div className="lg:w-5/12 md:w-full h-100 flex flex-col justify-between gap-4">
+            <Widget4 />
+            <Widget5 />
+          </div>
+          <div className="lg:w-2/12 md:w-full h-100 my-4 lg:my-0">
+            <Widget6 />
+          </div>
+          <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
+            <Widget7 />
+          </div>
         </div>
-      </div>
 
-      <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col mx-4 ">
-        <div className="lg:w-5/12 md:w-full h-100 flex flex-col justify-between gap-4">
-          <Widget4 />
-          <Widget5 />
-        </div>
-        <div className="lg:w-2/12 md:w-full h-100 my-4 lg:my-0">
-          <Widget6 />
-        </div>
-        <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
-          <Widget7 />
+        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col my-4">
+          <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
+            <Widget1 />
+          </div>
+          <div className="lg:w-6/12 md:w-full h-100 flex flex-col justify-between gap-4">
+            <Widget2 />
+            <Widget3 />
+          </div>
         </div>
       </div>
     </LayoutAdmin>

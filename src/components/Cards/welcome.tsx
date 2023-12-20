@@ -8,7 +8,7 @@ const handleClick = () => {
 
 export const Welcome = () => {
   return (
-    <div className="flex flex-row bg-[#FF5959] rounded-xl p-5 my-4 items-center">
+    <div className="flex flex-col space-y-5 md:flex-row md:space-y-0 bg-[#FF5959] rounded-xl p-5 my-4 items-center">
       <Image
         src="/avatar.png"
         width={90}
@@ -23,7 +23,7 @@ export const Welcome = () => {
           Don't forget to be happy for today, you guys are amazing
         </p>
       </div>
-      <div className="ml-auto mr-2">
+      <div className="md:ml-auto mr-2">
         <Buttons
           typeButton="white"
           title="Start Here!!"

@@ -95,6 +95,12 @@ const menus = [
     url: "/form",
     icon: <LuFormInput size="20" />,
   },
+  {
+    id: 8,
+    name: "badges",
+    url: "/badges",
+    icon: <LuFormInput size="20" />,
+  },
 ];
 
 export { column, isi, menus };

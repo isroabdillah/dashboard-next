@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Pills } from "../Badges/pills";
 
 export const Widget4 = () => {
   return (
@@ -19,9 +20,7 @@ export const Widget4 = () => {
         </div>
       </div>
       <div className="flex items-center">
-        <div className="py-[34] px-[10px] bg-[#EEF2FF] rounded-full mx-1 w-[125px] items-center justify-center border-[1px] border-[#676FA3]">
-          <p className="text-[#676FA3] text-center">Indonesia</p>
-        </div>
+        <Pills />
           <p className="text-[#9CA3AF] text-[14px] font-light pl-2">27 Year</p>
       </div>
     </div>

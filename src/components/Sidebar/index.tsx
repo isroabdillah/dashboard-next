@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import { menus } from "@/utils/data";
+import { FaChevronLeft } from "react-icons/fa";
 
 interface Sidebar {
   collapsed: boolean;
@@ -16,22 +17,32 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
     <aside
       id="sidebar"
       className={`${
-        collapsed ? "w-60 translate-x-0" : "w-20 -translate-x-20 md:translate-x-0"
+        collapsed
+          ? "w-60 translate-x-0"
+          : "w-20 -translate-x-20 md:translate-x-0"
       } fixed shadow-lg lg:shadow-none z-40 md:sticky top-0 left-0 h-screen transition-all duration-200 ease-in-out`}
       aria-label="Sidebar"
     >
       <div className="flex h-full flex-col overflow-y-auto border-r border-slate-200 bg-white px-3 py-4 dark:border-slate-700 dark:bg-slate-900">
-        <div className="mb-10 flex justify-between items-center rounded-lg px-3 py-2 text-slate-900 dark:text-white">
+        <div className="mb-10 flex justify-between items-center rounded-lg px-3 py-2 text-slate-900 dark:text-white relative">
           {collapsed ? (
-            <button onClick={() => setSidebarCollapsed(!collapsed)}>
-              <img src="/logoarkatama.png" alt="" />
-            </button>
+            <>
+              <button onClick={() => setSidebarCollapsed(!collapsed)}>
+                <img src="/logoarkatama.png" alt="" />
+              </button>
+              <button onClick={() => setSidebarCollapsed(!collapsed)} className="absolute -right-7 z-50 p-[13px] rounded-full text-white lg:hidden bg-[#FF5959]">
+                <FaChevronLeft />
+              </button>
+            </>
           ) : (
-            <button onClick={() => setSidebarCollapsed(!collapsed)}>
-              <img src="/icon-arkatama.png" alt="" />
-            </button>
+            <>
+              <button onClick={() => setSidebarCollapsed(!collapsed)}>
+                <img src="/icon-arkatama.png" alt="" />
+              </button>
+            </>
           )}
         </div>
+
         <ul className="space-y-4 text-sm font-medium">
           {menus.map((menu) => (
             <li key={menu.id}>

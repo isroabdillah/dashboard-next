@@ -7,6 +7,7 @@ import { FaCheck } from "react-icons/fa";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import Buttons from "@/components/Buttons";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Banner } from "@/components/Cards/banner";
 
 const handleClick = () => {
   console.log("Tombol diklik!");
@@ -23,33 +24,141 @@ export default function page() {
         <Breadcrumbs currentPage="Button" />
       </div>
 
-      <div className="flex flex-wrap gap-4 ml-4">
-        <div className=" p-6 bg-white rounded-xl lg:w-fit">
-          <h5 className="mb-4 font-regular">Styles</h5>
-          <div className="flex gap-x-4 ">
+      <div className="px-4">
+        <Banner
+          title="Buttons"
+          text="Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more."
+        />
+      </div>
+
+      <div className="mx-4 pt-4">
+        <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+          Buttons
+        </h4>
+        <div className="p-6 bg-white rounded-lg lg:w-full">
+          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
+            Styles
+          </p>
+          <div className="flex flex-wrap gap-4 pt-4">
             <Buttons
               typeButton="primary"
-              title="Button"
+              title="Primary"
               onClickAction={handleClick}
             />
 
             <Buttons
               typeButton="secondary"
-              title="Button icon"
+              title="Secondary"
               onClickAction={handleClick}
-              icon={FaHome}
             />
 
             <Buttons
-              typeButton="success"
-              title=""
+              typeButton="warning"
+              title="Warning"
               onClickAction={handleClick}
-              icon={FaCheck}
+            />
+
+            <Buttons
+              typeButton="danger"
+              title="Danger"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="info"
+              title="Info"
+              onClickAction={handleClick}
             />
           </div>
         </div>
+      </div>
 
-        <div className=" p-6 bg-white rounded-xl lg:w-fit">
+      <div className="mx-4 pt-4">
+        <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+          Ountine Buttons
+        </h4>
+        <div className="p-6 bg-white rounded-lg lg:w-full md:w-fit">
+          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
+            Styles
+          </p>
+          <div className="flex flex-wrap gap-4 pt-4 ">
+            <Buttons
+              typeButton="ol-primary"
+              title="Primary"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="ol-secondary"
+              title="Secondary"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="ol-warning"
+              title="Warning"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="ol-danger"
+              title="Danger"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="ol-info"
+              title="Info"
+              onClickAction={handleClick}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-4 pt-4">
+        <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+          Soft Buttons
+        </h4>
+        <div className="p-6 bg-white rounded-lg lg:w-full md:w-fit">
+          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
+            Styles
+          </p>
+          <div className="flex flex-wrap gap-4 pt-4 ">
+            <Buttons
+              typeButton="soft-primary"
+              title="Primary"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="soft-secondary"
+              title="Secondary"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="soft-warning"
+              title="Warning"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="soft-danger"
+              title="Danger"
+              onClickAction={handleClick}
+            />
+
+            <Buttons
+              typeButton="soft-info"
+              title="Info"
+              onClickAction={handleClick}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-4 ml-4">
+        {/* <div className=" p-6 bg-white rounded-xl lg:w-fit">
           <h5 className="mb-4 font-regular">Large Button Icon</h5>
           <div className="flex gap-x-4 pb-4">
             <Buttons
@@ -125,7 +234,7 @@ export default function page() {
               onClickAction={handleClick}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </LayoutAdmin>
   );

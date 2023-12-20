@@ -1,6 +1,7 @@
 "use client";
 import { LuAlignJustify, LuSearch, LuBellDot } from "react-icons/lu";
 import { Dropdown } from "../Dropdown";
+import Image from "next/image";
 
 interface Topbar {
   collapsed: boolean;
@@ -32,9 +33,23 @@ const Topbar: React.FC<Topbar> = ({ collapsed, setSidebarCollapsed }) => {
         </div>
       </div>
       <div className="flex items-center gap-5">
-        <LuBellDot size="20" />
-        <div className="hidden lg:block">
-          <Dropdown />
+        <Image
+          src="/bel.svg"
+          width={44}
+          height={44}
+          alt="Picture of the author"
+        />
+        <div className="flex items-center border-l-[1px] border-zinc-300 pl-4 ">
+          <Image
+            src="/Avatar-Profile-1.png"
+            width={39}
+            height={39}
+            alt="Picture of the author"
+          />
+          <div className="lg:flex flex-col px-4 hidden ">
+            <h6 className="text-gray-900 text-sm not-italic font-medium leading-5">Arkatama</h6>
+            <p className="text-gray-900 text-sm font-light leading-5">info@arkatama.com</p>
+          </div>
         </div>
       </div>
     </header>

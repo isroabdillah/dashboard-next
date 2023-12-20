@@ -6,6 +6,7 @@ import Button from "@/components/Forms/Button";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { Banner } from "@/components/Cards/banner";
 
 export default function Toast() {
   const notify = () => toast("toast default");
@@ -94,26 +95,43 @@ export default function Toast() {
         <Breadcrumbs currentPage="Toast" />
       </div>
 
-      <div className="flex gap-x-3 m-4">
-        <Buttons typeButton="primary" title="Toast" onClickAction={notify} />
-
-        <Buttons
-          typeButton="primary"
-          title="Success Toast"
-          onClickAction={success}
+      <div className="px-4">
+        <Banner
+          title="Banner"
+          text="Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more."
         />
+      </div>
 
-        <Buttons
-          typeButton="primary"
-          title="Error Toast"
-          onClickAction={error}
-        />
+      <div className="mx-4 pt-4">
+        <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+          Toasts
+        </h4>
+        <div className="p-6 bg-white rounded-lg lg:w-full">
+          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
+            Styles
+          </p>
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Buttons typeButton="primary" title="Toast" onClickAction={notify} />
 
-        <Buttons
-          typeButton="primary"
-          title="Error custom"
-          onClickAction={notif}
-        />
+              <Buttons
+                typeButton="primary"
+                title="Success Toast"
+                onClickAction={success}
+              />
+
+              <Buttons
+                typeButton="primary"
+                title="Error Toast"
+                onClickAction={error}
+              />
+
+              <Buttons
+                typeButton="primary"
+                title="Error custom"
+                onClickAction={notif}
+              />         
+          </div>
+        </div>
       </div>
 
       <Toaster position="top-right" reverseOrder={false} />

@@ -6,7 +6,7 @@ export const Widget5 = () => {
     <div className="py-[25px] px-[25px] bg-white rounded-xl lg:w-full flex items-center justify-between">
       <div className="flex items-center">
         <Image
-          src="/icon-1.png"
+          src="/icon-1.svg"
           width={63}
           height={63}
           alt="Picture of the author"

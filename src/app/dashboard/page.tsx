@@ -68,7 +68,7 @@ export default function Dashboard() {
         </div>
 
         <div className="lg:flex lg:flex-row w-full gap-4 flex-col mt-4 space-y-4 lg:space-y-0">
-          <div className="lg:w-3/12 w-full box-border">
+          <div className="lg:w-3/12 w-full">
             <Chart2/>
           </div>
           <div className="lg:w-3/12 w-full">

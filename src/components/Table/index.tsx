@@ -29,9 +29,9 @@ interface TableProps {
 
 const Table: React.FC<TableProps> = ({ header, isian }) => {
   return (
-    <div className="mt-3">
-      <div className="sm:px-6 w-full">
-        <div className="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10 rounded-lg mb-6">
+    <div className="mt-6">
+      <div className="sm:px-6 lg:px-0  w-full">
+        <div className="bg-white py-4 md:py-7 md:px-8 rounded-lg">
           <div className="sm:flex items-center justify-between">
             <div className="p-4">
               <label htmlFor="table-search" className="sr-only">

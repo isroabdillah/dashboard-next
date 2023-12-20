@@ -5,8 +5,21 @@ type ButtonProps = {
   title: string;
   typeButton:
     | "primary"
-    | "success"
     | "secondary"
+    | "warning"
+    | "danger"
+    | "info"
+    | "ol-primary"
+    | "ol-secondary"
+    | "ol-warning"
+    | "ol-danger"
+    | "ol-info"
+    | "soft-primary"
+    | "soft-secondary"
+    | "soft-warning"
+    | "soft-danger"
+    | "soft-info"
+    | "success"
     | "invers-primary"
     | "invers-secondary"
     | "invers-success"
@@ -30,22 +43,82 @@ const Buttons: React.FC<ButtonProps> = ({
   icon: Icon,
 }) => {
   let buttonClass =
-    "px-4 flex gap-x-2  items-center py-2 font-regular tracking-widest ";
+    "px-[20px] py-[10px] min-w-[137px] flex gap-x-2 text-center items-center font-regular tracking-widest justify-center ";
 
   switch (typeButton) {
     case "primary":
       buttonClass +=
-        "p-2 from-red-500 to-red-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-red-600";
-      break;
-
-    case "success":
-      buttonClass +=
-        "p-2 from-emerald-500 to-emerald-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-emerald-600";
+        "p-2 rounded-lg bg-[#FF5959] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
       break;
 
     case "secondary":
       buttonClass +=
-        "p-2 from-orange-500 to-orange-400 bg-gradient-to-r rounded-xl text-sm text-white px-6 transform transition-all duration-200 hover:to-orange-600";
+        "p-2 rounded-lg bg-[#999999] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "warning":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#F5C002] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "danger":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#CB3030] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "info":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#676FA3] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "ol-primary":
+      buttonClass +=
+        "p-2 rounded-lg border-2 border-[#FF5959] min-w-[137px] text-sm text-[#FF5959] font-semibold px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "ol-secondary":
+      buttonClass +=
+        "p-2 rounded-lg border-2 border-[#999999] min-w-[137px] text-sm text-[#999999] font-semibold px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "ol-warning":
+      buttonClass +=
+        "p-2 rounded-lg border-2 border-[#F5C002] min-w-[137px] text-sm text-[#F5C002] font-semibold px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "ol-danger":
+      buttonClass +=
+        "p-2 rounded-lg border-2 border-[#CB3030] min-w-[137px] text-sm text-[#CB3030] font-semibold px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "ol-info":
+      buttonClass +=
+        "p-2 rounded-lg border-2 border-[#676FA3] min-w-[137px] text-sm text-[#676FA3]  px-6 transform transition-all duration-200 hover:bg-opacity-80";
+      break;
+
+    case "soft-primary":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#FF5959] bg-opacity-30 min-w-[137px] text-sm text-[#FF5959] px-6 font-semibold transform transition-all duration-200 hover:bg-opacity-40";
+      break;
+
+    case "soft-secondary":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#999999] bg-opacity-30 min-w-[137px] text-sm text-[#999999] px-6 font-semibold transform transition-all duration-200 hover:bg-opacity-40";
+      break;
+
+    case "soft-warning":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#F5C002] bg-opacity-30 min-w-[137px] text-sm text-[#F5C002] px-6 font-semibold transform transition-all duration-200 hover:bg-opacity-40";
+      break;
+
+    case "soft-danger":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#CB3030] bg-opacity-30 min-w-[137px] text-sm text-[#CB3030] px-6 font-semibold transform transition-all duration-200 hover:bg-opacity-40";
+      break;
+
+    case "soft-info":
+      buttonClass +=
+        "p-2 rounded-lg bg-[#676FA3] bg-opacity-30  min-w-[137px] text-sm text-[#676FA3] font-semibold px-6 transform transition-all duration-200 hover:bg-opacity-40";
       break;
 
     case "invers-primary":
