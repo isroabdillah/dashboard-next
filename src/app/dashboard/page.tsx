@@ -18,6 +18,9 @@ import { Widget6 } from "@/components/widget/widget6";
 import { Widget7 } from "@/components/widget/widget7";
 import { List } from "@/components/Table/list";
 import { Task } from "@/components/Table/task";
+import { Chart2 } from "@/components/Charts/chart2";
+import { Chart1 } from "@/components/Charts";
+import { Chart3 } from "@/components/Charts/chart3";
 
 const handleClick = () => {
   console.log("Tombol diklik!");
@@ -51,24 +54,36 @@ export default function Dashboard() {
 
         <Welcome />
 
-        <div className="flex lg:w-full gap-6">
-          <div className="w-5/12 h-100 flex flex-col justify-between">
+        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col ">
+          <div className="lg:w-5/12 md:w-full h-100 flex flex-col justify-between gap-4">
             <Widget4 />
             <Widget5 />
           </div>
-          <div className="w-2/12 h-100">
+          <div className="lg:w-2/12 md:w-full h-100 my-4 lg:my-0">
             <Widget6 />
           </div>
-          <div className="w-5/12 h-100">
+          <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
             <Widget7 />
           </div>
         </div>
 
-        <div className="flex lg:w-full gap-6 mb-6">
-          <div className="w-5/12 h-100">
+        <div className="lg:flex lg:flex-row w-full gap-4 flex-col mt-4 space-y-4 lg:space-y-0">
+          <div className="lg:w-3/12 w-full box-border">
+            <Chart2/>
+          </div>
+          <div className="lg:w-3/12 w-full">
+            <Chart1 />
+          </div>
+          <div className="lg:w-6/12 w-full">
+            <Chart3 />
+          </div>
+        </div>
+
+        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col">
+          <div className="lg:w-5/12 w-full h-100">
             <List />
           </div>
-          <div className="w-7/12 h-100">
+          <div className="lg:w-7/12 w-full h-100">
             <Task />
           </div>
         </div>

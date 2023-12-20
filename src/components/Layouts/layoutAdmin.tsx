@@ -17,7 +17,7 @@ const LayoutAdmin: React.FC<LayoutAdminProps> = ({ children }) => {
         collapsed={collapsed}
         setSidebarCollapsed={setSidebarCollapsed}
       />
-      <main className="w-full space-y-6">
+      <main className={`${collapsed ? "md:w-[calc(100%_-_15rem)]" : "md:w-[calc(100%_-_5rem)]"} w-full space-y-6`}>
         <Topbar
           collapsed={collapsed}
           setSidebarCollapsed={setSidebarCollapsed}

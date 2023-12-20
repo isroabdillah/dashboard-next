@@ -16,8 +16,8 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
     <aside
       id="sidebar"
       className={`${
-        collapsed ? "w-60" : "w-20 -left-40"
-      } fixed top-0 left-0 z-40 shadow-lg lg:static lg:shadow-none h-screen transition-all duration-200 ease-in-out`}
+        collapsed ? "w-60 translate-x-0" : "w-20 -translate-x-20 md:translate-x-0"
+      } fixed shadow-lg lg:shadow-none z-40 md:sticky top-0 left-0 h-screen transition-all duration-200 ease-in-out`}
       aria-label="Sidebar"
     >
       <div className="flex h-full flex-col overflow-y-auto border-r border-slate-200 bg-white px-3 py-4 dark:border-slate-700 dark:bg-slate-900">
@@ -27,7 +27,9 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
               <img src="/logoarkatama.png" alt="" />
             </button>
           ) : (
-            <img src="/icon-arkatama.png" alt="" />
+            <button onClick={() => setSidebarCollapsed(!collapsed)}>
+              <img src="/icon-arkatama.png" alt="" />
+            </button>
           )}
         </div>
         <ul className="space-y-4 text-sm font-medium">

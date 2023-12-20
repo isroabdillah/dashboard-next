@@ -15,7 +15,7 @@ export const Widget2 = () => {
         <div className="flex justify-between items-center ">
           <i className="fab fa-behance text-xl text-gray-400"></i>
         </div>
-        <div className="text-2xl text-gray-700 font-medium leading-8 mt-5">99</div>
+        <div className="text-2xl text-gray-700 font-medium leading-8 mt-1">99</div>
         <div className="text-sm text-gray-500">Projects</div>
       </div>
     </div>
