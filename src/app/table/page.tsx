@@ -6,6 +6,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { List } from "@/components/Table/list";
 import { Task } from "@/components/Table/task";
 
+import { Banner } from "@/components/Cards/banner";
+
 export default function page() {
   return (
     <LayoutAdmin>
@@ -17,6 +19,13 @@ export default function page() {
       >
         <h1 className="text-lg font-medium">Table</h1>
         <Breadcrumbs currentPage="Table" />
+      </div>
+
+      <div className="pt-4">
+        <Banner
+          title="Tables"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
+        />
       </div>
 
       <Table header={column} isian={isi} />

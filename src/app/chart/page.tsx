@@ -6,6 +6,7 @@ import { Chart2 } from "@/components/Charts/chart2";
 import { Chart3 } from "@/components/Charts/chart3";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import React from "react";
+import { Banner } from "@/components/Cards/banner";
 
 export default function Chart() {
   return (
@@ -18,6 +19,13 @@ export default function Chart() {
           <h1 className="text-lg font-medium">Chart</h1>
           <Breadcrumbs currentPage="Chart" />
         </div>
+
+        <div className="mt-4">
+        <Banner
+          title="Chart JS"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
+        />
+      </div>
 
         <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col">
           <div className="lg:w-3/12 md:w-full h-100 mt-4">

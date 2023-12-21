@@ -2,6 +2,7 @@ import React from "react";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import { Forms } from "@/components/Forms/page";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Banner } from "@/components/Cards/banner";
 
 export default function page() {
   return (
@@ -13,7 +14,15 @@ export default function page() {
         <h1 className="text-xl font-medium">Form</h1>
         <Breadcrumbs currentPage="Form" />
       </div>
-      <div className="mb-4 pb-4">
+
+      <div className="px-4">
+        <Banner
+          title="Form"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
+        />
+      </div>
+
+      <div className="pb-4 m-4">
         <Forms />
       </div>
     </LayoutAdmin>

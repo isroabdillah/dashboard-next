@@ -8,6 +8,7 @@ import { Widget5 } from "@/components/widget/widget5";
 import { Widget6 } from "@/components/widget/widget6";
 import { Widget7 } from "@/components/widget/widget7";
 import React from "react";
+import { Banner } from "@/components/Cards/banner";
 
 export default function Widget() {
   return (
@@ -20,6 +21,11 @@ export default function Widget() {
           <h1 className="text-lg font-medium">Widget</h1>
           <Breadcrumbs currentPage="Widget" />
         </div>
+
+        <Banner
+            title="Widget"
+            text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
+          />
 
         <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col gap-4">
           <Widget1 />
