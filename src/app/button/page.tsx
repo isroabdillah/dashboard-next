@@ -6,8 +6,10 @@ import { FaHome } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import Buttons from "@/components/Buttons";
+import PlaceholderCard from "@/components/Cards/placeholderCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Banner } from "@/components/Cards/banner";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const handleClick = () => {
   console.log("Tombol diklik!");
@@ -35,84 +37,250 @@ export default function page() {
         <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
           Buttons
         </h4>
-        <div className="p-6 bg-white rounded-lg lg:w-full">
-          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
-            Styles
-          </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Buttons
-              typeButton="primary"
-              title="Primary"
-              onClickAction={handleClick}
-            />
+        <PlaceholderCard
+          children={
+            <div id="design">
+              <div className="flex flex-wrap gap-4 pt-4 ">
+                <Buttons
+                  typeButton="primary"
+                  title="Primary"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="secondary"
-              title="Secondary"
-              onClickAction={handleClick}
-            />
+                <Buttons
+                  typeButton="secondary"
+                  title="Secondary"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="warning"
-              title="Warning"
-              onClickAction={handleClick}
-            />
+                <Buttons
+                  typeButton="warning"
+                  title="Warning"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="danger"
-              title="Danger"
-              onClickAction={handleClick}
-            />
+                <Buttons
+                  typeButton="danger"
+                  title="Danger"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="info"
-              title="Info"
-              onClickAction={handleClick}
+                <Buttons
+                  typeButton="info"
+                  title="Info"
+                  onClickAction={handleClick}
+                />
+              </div>
+            </div>
+          }
+          childrenCode={
+            <CopyBlock
+              language="jsx"
+              theme={dracula}
+              text={`
+          <Buttons
+            typeButton="ol-primary"
+            title="Primary"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-secondary"
+            title="Secondary"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-warning"
+            title="Warning"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-danger"
+            title="Danger"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-info"
+            title="Info"
+            onClickAction={handleClick}
+          />
+        `}
+              codeBlock
+              showLineNumbers={true}
             />
-          </div>
-        </div>
+          }
+        />
       </div>
 
       <div className="mx-4 pt-4">
         <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
           Ountine Buttons
         </h4>
-        <div className="p-6 bg-white rounded-lg lg:w-full md:w-fit">
-          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
-            Styles
-          </p>
-          <div className="flex flex-wrap gap-4 pt-4 ">
-            <Buttons
-              typeButton="ol-primary"
-              title="Primary"
-              onClickAction={handleClick}
-            />
+        <PlaceholderCard
+          children={
+            <div id="design">
+              <div className="flex flex-wrap gap-4 pt-4 ">
+                <Buttons
+                  typeButton="ol-primary"
+                  title="Primary"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="ol-secondary"
-              title="Secondary"
-              onClickAction={handleClick}
-            />
+                <Buttons
+                  typeButton="ol-secondary"
+                  title="Secondary"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="ol-warning"
-              title="Warning"
-              onClickAction={handleClick}
-            />
+                <Buttons
+                  typeButton="ol-warning"
+                  title="Warning"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="ol-danger"
-              title="Danger"
-              onClickAction={handleClick}
-            />
+                <Buttons
+                  typeButton="ol-danger"
+                  title="Danger"
+                  onClickAction={handleClick}
+                />
 
-            <Buttons
-              typeButton="ol-info"
-              title="Info"
-              onClickAction={handleClick}
-            />
-          </div>
-        </div>
+                <Buttons
+                  typeButton="ol-info"
+                  title="Info"
+                  onClickAction={handleClick}
+                />
+              </div>
+            </div>
+          }
+          childrenCode={
+            <div className="pt-4">
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`
+          <Buttons sada
+            typeButton="ol-primary"
+            title="Primary"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-secondary"
+            title="Secondary"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-warning"
+            title="Warning"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-danger"
+            title="Danger"
+            onClickAction={handleClick}
+          />
+
+          <Buttons
+            typeButton="ol-info"
+            title="Info"
+            onClickAction={handleClick}
+          />
+        `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            </div>
+          }
+        />
+      </div>
+
+      <div className="mx-4 pt-4">
+        <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+          Soft Buttons
+        </h4>
+        <PlaceholderCard
+          children={
+            <div id="design">
+              <div className="flex flex-wrap gap-4 pt-4 ">
+                <Buttons
+                  typeButton="soft-primary"
+                  title="Primary"
+                  onClickAction={handleClick}
+                />
+
+                <Buttons
+                  typeButton="soft-secondary"
+                  title="Secondary"
+                  onClickAction={handleClick}
+                />
+
+                <Buttons
+                  typeButton="soft-warning"
+                  title="Warning"
+                  onClickAction={handleClick}
+                />
+
+                <Buttons
+                  typeButton="soft-danger"
+                  title="Danger"
+                  onClickAction={handleClick}
+                />
+
+                <Buttons
+                  typeButton="soft-info"
+                  title="Info"
+                  onClickAction={handleClick}
+                />
+              </div>
+            </div>
+          }
+          childrenCode={
+            <div className="pt-4">
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`
+                <Buttons
+                typeButton="soft-primary"
+                title="Primary"
+                onClickAction={handleClick}
+              />
+
+              <Buttons
+                typeButton="soft-secondary"
+                title="Secondary"
+                onClickAction={handleClick}
+              />
+
+              <Buttons
+                typeButton="soft-warning"
+                title="Warning"
+                onClickAction={handleClick}
+              />
+
+              <Buttons
+                typeButton="soft-danger"
+                title="Danger"
+                onClickAction={handleClick}
+              />
+
+              <Buttons
+                typeButton="soft-info"
+                title="Info"
+                onClickAction={handleClick}
+              />
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            </div>
+          }
+        />
       </div>
 
       <div className="mx-4 pt-4">

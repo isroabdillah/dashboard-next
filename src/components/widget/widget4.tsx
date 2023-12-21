@@ -4,7 +4,7 @@ import { Pills } from "../Badges/pills";
 
 export const Widget4 = () => {
   return (
-    <div className="py-[32px] px-[25px] bg-white rounded-xl lg:w-full flex items-center justify-between">
+    <div className="py-[32px] px-[25px] border-2 border-zinc-100 max-w-md bg-white rounded-xl lg:w-full flex items-center justify-between">
       <div className="flex items-center">
         <Image
           src="/Avatar-Profile-1.png"

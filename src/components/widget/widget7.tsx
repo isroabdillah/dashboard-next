@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Widget7 = () => {
   return (
-    <div className="py-[25px] px-[25px] bg-white rounded-xl">
+    <div className="py-[25px] px-[25px] bg-white rounded-xl border-2 border-zinc-100 lg:w-1/3 w-full">
       <h5 className="text-[14px] text-[#FF5959] font-semibold mb-[12px]">
         EVENT
       </h5>

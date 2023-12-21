@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Widget1 = () => {
   return (
     <div
-      className="rounded-3xl flex bg-white p-7 justify-between flex-col space-y-6 sm:space-y-0 items-center sm:items-stretch sm:flex-row "
+      className="rounded-3xl flex border-2 border-zinc-200 bg-white p-7 justify-between flex-col space-y-6 sm:space-y-0 items-center sm:items-stretch sm:flex-row "
       id="widget"
     >
       <div className="flex flex-col space-x-0 items-center">

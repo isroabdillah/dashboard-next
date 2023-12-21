@@ -1,3 +1,5 @@
+"use client";
+
 import Breadcrumbs from "@/components/Breadcrumbs";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import { Widget1 } from "@/components/widget/widget1";
@@ -9,6 +11,8 @@ import { Widget6 } from "@/components/widget/widget6";
 import { Widget7 } from "@/components/widget/widget7";
 import React from "react";
 import { Banner } from "@/components/Cards/banner";
+import PlaceholderCard from "@/components/Cards/placeholderCard";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 export default function Widget() {
   return (
@@ -23,30 +27,214 @@ export default function Widget() {
         </div>
 
         <Banner
-            title="Widget"
-            text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
+          title="Widget"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
+        />
+
+        <div className="pt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Buttons
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget1 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={` 
+import { Widget1 } from "@/components/widget/widget1";
+
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget1 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
           />
-
-        <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col gap-4">
-          <Widget1 />
-          <div className="flex flex-col lg:w-6/12 gap-y-4">
-            <Widget2 />
-            <Widget3 />
-          </div>
         </div>
 
-        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col ">
-          <div className="lg:w-5/12 md:w-full h-100 flex flex-col justify-between gap-4">
-            <Widget4 />
-            <Widget5 />
-          </div>
-          <div className="lg:w-2/12 md:w-full h-100 my-4 lg:my-0">
-            <Widget6 />
-          </div>
-          <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
-            <Widget7 />
-          </div>
+        <div className="pt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Widget 2
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget2 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Widget2 } from "@/components/widget/widget2";
+
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget2 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
         </div>
+
+        <div className="pt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Widget 3
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget3 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Widget3 } from "@/components/widget/widget2";
+                
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget3 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        <div className="pt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Widget 4
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget4 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Widget4 } from "@/components/widget/widget2";
+                
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget4 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        <div className="pt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Widget 5
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget5 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Widget5 } from "@/components/widget/widget2";
+                
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget5 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        <div className="pt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Widget 6
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget6 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Widget6 } from "@/components/widget/widget2";
+                
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget6 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        <div className="pt-4 pb-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Widget 7
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <Widget7 />
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Widget7 } from "@/components/widget/widget2";
+                
+<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+  <Widget7 />
+</div>
+                `}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
       </div>
     </LayoutAdmin>
   );

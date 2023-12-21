@@ -3,7 +3,7 @@ import React from "react";
 export const Widget2 = () => {
   return (
     <div className=" md:w-full lg:w-1/2">
-      <div className="p-4 relative  bg-white shadow-sm  rounded-2xl">
+      <div className="p-4 relative  bg-white border-2 border-zinc-100 rounded-2xl max-w-md">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-14 w-14  absolute bottom-4 right-3 text-red-500"

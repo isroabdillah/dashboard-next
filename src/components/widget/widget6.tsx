@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export const Widget6 = () => {
   return (
-    <div className="py-[25px] px-[25px] h-full bg-white rounded-xl flex flex-col justify-between">
+    <div className="py-[25px] px-[25px] h-full max-w-sm border-2 border-zinc-100 bg-white rounded-xl flex flex-col justify-between">
       <Image
         src="/icon-2.svg"
         width={63}
         height={63}
         alt="Picture of the author"
       />
-      <div className="">
+      <div className="mt-9">
         <p className="text-[14px] text-[#9CA3AF] font-light mb-6">
           Revenue this month
         </p>
