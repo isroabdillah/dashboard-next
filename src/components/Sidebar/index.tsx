@@ -60,7 +60,15 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
                     } ${collapsed ? "pl-9" : ""}
                     flex justify-center rounded-r-lg items-center py-3 text-slate-900`}
                   >
-                    {page?.icon}
+                    <span
+                      className={`${
+                        params === page?.url
+                          ? "bg-white p-[5px] rounded-md"
+                          : ""
+                      }`}
+                    >
+                      {page?.icon}
+                    </span>
                     {collapsed && (
                       <span className="ml-3 flex-1 whitespace-nowrap capitalize transition-all duration-300 ease-in-out">
                         {page?.name}
@@ -79,7 +87,15 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
                           : setAccordion(`${page?.name}`)
                       }
                     >
-                      {page?.icon}
+                      <span
+                        className={`${
+                          params === page?.url
+                            ? "bg-white p-[5px] rounded-md"
+                            : ""
+                        }`}
+                      >
+                        {page?.icon}
+                      </span>
                       {collapsed && (
                         <span className="ml-3 flex-1 whitespace-nowrap capitalize transition-all duration-300 ease-in-out">
                           {page?.name}
@@ -108,7 +124,15 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
                                 : "hover:bg-slate-100"
                             } flex justify-start rounded-r-lg items-center pl-16 py-3 text-slate-900`}
                           >
-                            {item?.icon}
+                            <span
+                              className={`${
+                                params === page?.url
+                                  ? "bg-white p-[5px] rounded-md"
+                                  : ""
+                              }`}
+                            >
+                              {item?.icon}
+                            </span>
                             {collapsed && (
                               <span className="ml-3 flex-1 whitespace-nowrap capitalize">
                                 {item?.name}
@@ -143,7 +167,15 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
                     collapsed ? "pl-9" : ""
                   } flex justify-center rounded-r-lg items-center py-3 text-slate-900`}
                 >
-                  {component?.icon}
+                  <span
+                    className={`${
+                      params === component?.url
+                        ? "bg-white p-[5px] rounded-md"
+                        : ""
+                    }`}
+                  >
+                    {component?.icon}
+                  </span>
                   {collapsed && (
                     <span className="ml-3 flex-1 whitespace-nowrap capitalize transition-all duration-300 ease-in-out">
                       {component?.name}

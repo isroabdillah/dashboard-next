@@ -4,6 +4,7 @@ import {
   BadgeIcon,
   ButtonIcon,
   CardIcon,
+  ChartIcon,
   WidgetIcon,
   FormIcon,
   TableIcon,
@@ -93,7 +94,7 @@ const menus = [
     name: "chart js",
     url: "/chart",
     type: "components",
-    icon: <BadgeIcon />,
+    icon: <ChartIcon />,
   },
   {
     id: 5,
@@ -130,6 +131,13 @@ const menus = [
     type: "components",
     icon: <FormIcon />,
   },
+  {
+    id: 9,
+    name: "badges",
+    url: "/badges",
+    type: "components",
+    icon: <BadgeIcon />,
+  },  
 ];
 
 export { column, isi, menus };
