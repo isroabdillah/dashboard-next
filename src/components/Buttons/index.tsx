@@ -55,32 +55,32 @@ const Buttons: React.FC<ButtonProps> = ({
   icon: Icon,
 }) => {
   let buttonClass =
-    "px-[20px] py-[10px] min-w-[137px] flex gap-x-2 text-center items-center font-regular tracking-widest justify-center ";
+    "px-[20px] py-[10px] lg:max-w-[137px] w-full flex gap-x-2 text-center items-center font-regular tracking-widest justify-center ";
 
   switch (typeButton) {
     case "primary":
       buttonClass +=
-        "p-2 rounded-lg bg-[#FF5959] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+        "p-2 rounded-lg bg-[#FF5959] md:max-w-[137px] w-full text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
       break;
 
     case "secondary":
       buttonClass +=
-        "p-2 rounded-lg bg-[#999999] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+        "p-2 rounded-lg bg-[#999999] md:max-w-[137px] w-full text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
       break;
 
     case "warning":
       buttonClass +=
-        "p-2 rounded-lg bg-[#F5C002] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+        "p-2 rounded-lg bg-[#F5C002] md:max-w-[137px] w-full text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
       break;
 
     case "danger":
       buttonClass +=
-        "p-2 rounded-lg bg-[#CB3030] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+        "p-2 rounded-lg bg-[#CB3030] md:max-w-[137px] w-full text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
       break;
 
     case "info":
       buttonClass +=
-        "p-2 rounded-lg bg-[#676FA3] min-w-[137px] text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
+        "p-2 rounded-lg bg-[#676FA3] md:max-w-[137px] w-full text-sm text-white px-6 transform transition-all duration-200 hover:bg-opacity-80";
       break;
 
     case "ol-primary":

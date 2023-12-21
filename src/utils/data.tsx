@@ -132,12 +132,19 @@ const menus = [
     icon: <FormIcon />,
   },
   {
-    id: 9,
-    name: "badges",
-    url: "/badges",
+    id: 10,
+    name: "tabs",
+    url: "/tabs",
     type: "components",
     icon: <BadgeIcon />,
   },  
+  {
+    id: 11,
+    name: "alerts",
+    url: "/alerts",
+    type: "components",
+    icon: <BadgeIcon />,
+  }, 
 ];
 
 export { column, isi, menus };
