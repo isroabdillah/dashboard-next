@@ -20,7 +20,7 @@ export const Widget4 = () => {
         </div>
       </div>
       <div className="flex items-center">
-        <Pills />
+        <Pills status="warning"/>
           <p className="text-[#9CA3AF] text-[14px] font-light pl-2">27 Year</p>
       </div>
     </div>

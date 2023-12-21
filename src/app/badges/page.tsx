@@ -3,6 +3,7 @@ import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import React from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Banner } from "@/components/Cards/banner";
+import Pillsx from "@/components/Badges/pills2";
 
 export default function page() {
   return (
@@ -32,8 +33,11 @@ export default function page() {
             Styles
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
-            <Pills/>
-          <Pills />
+            <Pills status="success"/>
+            <Pills status="danger"/>
+            <Pills status="warning"/>
+
+            <Pillsx typePills="primary" title="djsadh"/>
           </div>
         </div>
       </div>

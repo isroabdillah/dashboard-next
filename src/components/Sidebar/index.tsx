@@ -30,7 +30,7 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
               <button onClick={() => setSidebarCollapsed(!collapsed)}>
                 <img src="/logoarkatama.png" alt="" />
               </button>
-              <button onClick={() => setSidebarCollapsed(!collapsed)} className="absolute -right-7 z-50 p-[13px] rounded-full text-white lg:hidden bg-[#FF5959]">
+              <button onClick={() => setSidebarCollapsed(!collapsed)} className="absolute -right-7 z-0 p-[13px] rounded-full text-white lg:hidden bg-[#FF5959]">
                 <FaChevronLeft />
               </button>
             </>

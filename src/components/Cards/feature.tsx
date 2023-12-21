@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import React from "react";
 import Button from "../Forms/Button";
+import Buttons from "../Buttons";
 
 export const Feature = () => {
   return (
@@ -16,11 +17,14 @@ export const Feature = () => {
         <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
           With supporting text below as a natural lead-in to additional content.
         </p>
-        <Button
-          typeButton="primary"
-          title="Button"
-          onClickAction={() => console.log('Tombol diklik!')}
-        />
+
+        <div className="flex justify-center">
+          <Buttons
+            typeButton="primary"
+            title="Button"
+            onClickAction={() => console.log("Tombol diklik!")}
+          />
+        </div>
       </div>
       <div className="border-t-2 border-neutral-100 px-6 py-3 dark:border-neutral-600 dark:text-neutral-50">
         2 days ago

@@ -97,12 +97,12 @@ export default function Toast() {
 
       <div className="px-4">
         <Banner
-          title="Banner"
-          text="Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more."
+          title="Toast"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia officiis, eos perferendis recusandae beatae velit!"
         />
       </div>
 
-      <div className="mx-4 pt-4">
+      <div className="mx-4 pt-4 mb-4">
         <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
           Toasts
         </h4>
@@ -111,22 +111,22 @@ export default function Toast() {
             Styles
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
-            <Buttons typeButton="primary" title="Toast" onClickAction={notify} />
+            <Buttons typeButton="full-soft-primary" title="Toast" onClickAction={notify} />
 
               <Buttons
-                typeButton="primary"
+                typeButton="full-soft-success"
                 title="Success Toast"
                 onClickAction={success}
               />
 
               <Buttons
-                typeButton="primary"
+                typeButton="full-soft-danger"
                 title="Error Toast"
                 onClickAction={error}
               />
 
               <Buttons
-                typeButton="primary"
+                typeButton="full-soft-info"
                 title="Error custom"
                 onClickAction={notif}
               />         

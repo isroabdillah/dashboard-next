@@ -1,9 +1,29 @@
 import React from "react";
 
-export const Pills = () => {
+interface Props {
+  status: 'success' | 'danger' | 'warning';
+}
+
+export const Pills: React.FC<Props> = ({ status }) => {
+  let bgCollor = '';
+  switch (status) {
+    case 'success':
+      bgCollor = 'bg-[#8CD790]'; // or any color code for success
+      break;
+    case 'danger':
+      bgCollor = 'bg-[#FF5959]'; // or any color code for danger
+      break;
+    case 'warning':
+      bgCollor = 'bg-[#FDB827]'; // or any color code for warning
+      break;
+    default:
+      bgCollor = 'bg-[#EEF2FF]'; // default color
+      break;
+  }
+
   return (
-    <div className="py-[34] px-[10px] bg-[#EEF2FF] rounded-full mx-1 w-[125px] items-center justify-center border-[1px] border-[#676FA3]">
-      <p className="text-[#676FA3] text-center">Indonesia</p>
+      <div className={`px-2 bg-opacity-50 ${bgCollor} rounded-full  flex items-center justify-center`}>
+      <p className="text-[#1e2135] text-[14px] text-center">{status}</p>
     </div>
   );
 };

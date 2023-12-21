@@ -3,6 +3,7 @@
 import Button from "@/components/Forms/Button";
 import React from "react";
 import Image from "next/image";
+import Buttons from "../Buttons";
 
 export const Card = () => {
   return (
@@ -29,13 +30,14 @@ export const Card = () => {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </p>
-        
-        <Button
-          typeButton="primary"
-          title="Button"  
-          onClickAction={() => console.log('Tombol diklik!')}
-        />
 
+        <div className="flex justify-center">
+          <Buttons
+            typeButton="primary"
+            title="Button"
+            onClickAction={() => console.log("Tombol diklik!")}
+          />
+        </div>
       </div>
     </div>
   );
