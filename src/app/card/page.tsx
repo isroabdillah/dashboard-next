@@ -1,3 +1,7 @@
+"use client";
+
+import PlaceholderCard from "@/components/Cards/placeholderCard";
+import { CopyBlock, dracula } from "react-code-blocks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Card } from "@/components/Cards";
 import { Feature } from "@/components/Cards/feature";
@@ -25,7 +29,97 @@ export default function page() {
           />
         </div>
 
-        <div className="lg:flex lg:flex-row w-full gap-4 flex-col mt-4 space-y-4 lg:space-y-0">
+        <div className="pt-4 mt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Card 1
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                    <Card />
+                  </div>
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Card } from "@/components/Cards";
+
+<div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+  <Card />
+</div>`}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        <div className="pt-4 mt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Card quote
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                    <Quote />
+                  </div>
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Card } from "@/components/Quote";
+
+<div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+  <Quote />
+</div>`}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        <div className="pt-4 mt-4">
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Card Feature
+          </h4>
+          <PlaceholderCard
+            children={
+              <div id="design">
+                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                  <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                    <Feature />
+                  </div>
+                </div>
+              </div>
+            }
+            childrenCode={
+              <CopyBlock
+                language="jsx"
+                theme={dracula}
+                text={`import { Card } from "@/components/Feature";
+
+<div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+  <Feature />
+</div>`}
+                codeBlock
+                showLineNumbers={true}
+              />
+            }
+          />
+        </div>
+
+        {/* <div className="lg:flex lg:flex-row w-full gap-4 flex-col mt-4 space-y-4 lg:space-y-0">
           <div className="lg:w-4/12 w-full">
             <Card />
           </div>
@@ -35,7 +129,7 @@ export default function page() {
           <div className="lg:w-4/12 w-full">
             <Feature />
           </div>
-        </div>
+        </div> */}
       </div>
     </LayoutAdmin>
   );

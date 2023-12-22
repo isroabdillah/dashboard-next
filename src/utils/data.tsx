@@ -10,6 +10,8 @@ import {
   TableIcon,
   DropdownIcon,
   SpinnerIcon,
+  ModalIcon,
+  NavbarIcon,
 } from "@/components/Icons";
 
 let column = [
@@ -143,8 +145,29 @@ const menus = [
     name: "alerts",
     url: "/alerts",
     type: "components",
-    icon: <BadgeIcon />,
+    icon: <AlertIcon />,
   }, 
+  {
+    id: 12,
+    name: "modals",
+    url: "/modals",
+    type: "components",
+    icon: <ModalIcon />,
+  },
+  {
+    id: 13,
+    name: "navbar",
+    url: "/navbar",
+    type: "components",
+    icon: <NavbarIcon />,
+  },
+  {
+    id: 14,
+    name: "dropdowns",
+    url: "/dropdowns",
+    type: "components",
+    icon: <DropdownIcon />,
+  },
 ];
 
 export { column, isi, menus };

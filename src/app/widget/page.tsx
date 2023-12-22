@@ -38,7 +38,7 @@ export default function Widget() {
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-5/12 md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget1 />
                 </div>
               </div>
@@ -50,10 +50,9 @@ export default function Widget() {
                 text={` 
 import { Widget1 } from "@/components/widget/widget1";
 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:w-5/12 md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget1 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
@@ -68,7 +67,7 @@ import { Widget1 } from "@/components/widget/widget1";
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget2 />
                 </div>
               </div>
@@ -79,10 +78,9 @@ import { Widget1 } from "@/components/widget/widget1";
                 theme={dracula}
                 text={`import { Widget2 } from "@/components/widget/widget2";
 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget2 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
@@ -97,7 +95,7 @@ import { Widget1 } from "@/components/widget/widget1";
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:max-w-sm md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget3 />
                 </div>
               </div>
@@ -108,10 +106,9 @@ import { Widget1 } from "@/components/widget/widget1";
                 theme={dracula}
                 text={`import { Widget3 } from "@/components/widget/widget2";
                 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:max-w-sm md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget3 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
@@ -126,7 +123,7 @@ import { Widget1 } from "@/components/widget/widget1";
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget4 />
                 </div>
               </div>
@@ -137,10 +134,9 @@ import { Widget1 } from "@/components/widget/widget1";
                 theme={dracula}
                 text={`import { Widget4 } from "@/components/widget/widget2";
                 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget4 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
@@ -155,7 +151,7 @@ import { Widget1 } from "@/components/widget/widget1";
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget5 />
                 </div>
               </div>
@@ -166,10 +162,9 @@ import { Widget1 } from "@/components/widget/widget1";
                 theme={dracula}
                 text={`import { Widget5 } from "@/components/widget/widget2";
                 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget5 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
@@ -184,7 +179,7 @@ import { Widget1 } from "@/components/widget/widget1";
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:max-w-xs md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget6 />
                 </div>
               </div>
@@ -195,10 +190,9 @@ import { Widget1 } from "@/components/widget/widget1";
                 theme={dracula}
                 text={`import { Widget6 } from "@/components/widget/widget2";
                 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget6 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
@@ -213,7 +207,7 @@ import { Widget1 } from "@/components/widget/widget1";
           <PlaceholderCard
             children={
               <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:max-w-md md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
                   <Widget7 />
                 </div>
               </div>
@@ -224,17 +218,15 @@ import { Widget1 } from "@/components/widget/widget1";
                 theme={dracula}
                 text={`import { Widget7 } from "@/components/widget/widget2";
                 
-<div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+<div className="lg:max-w-xs md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100 p-1">
   <Widget7 />
-</div>
-                `}
+</div>`}
                 codeBlock
                 showLineNumbers={true}
               />
             }
           />
         </div>
-
       </div>
     </LayoutAdmin>
   );

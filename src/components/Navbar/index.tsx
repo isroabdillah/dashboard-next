@@ -14,13 +14,12 @@ export const Navbars = () => {
     <main className="bg-white">
       <div className="container mx-auto flex items-center h-[90px] border-b-1 border-black px-[110px]">
         <a href="" className="flex items-center justify-center">
-          <Image className="h-full w-full"
+          <Image className="h-full w-full mx-4"
             src="/icon-arkatama.png"
             width={38}
             height={32}
             alt=""
           />
-          {/* <img className="h-[32px]" src="./icon-arkatama.png" /> */}
         </a>
         <nav className="contents text-base lg:text-md">
           <ul className="mx-auto flex items-center gap-[5px]">
@@ -32,12 +31,6 @@ export const Navbars = () => {
             </li>
             <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Dokumentasi
-            </li>
-            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
-              Youtube Tutorial
-            </li>
-            <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
-              Use Case
             </li>
             <li className="py-[5px] px-[10px] rounded-md font-medium text-[#656565] ">
               Kontak CS

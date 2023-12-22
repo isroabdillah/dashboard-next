@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const List = () => {
   return (
-    <div className="py-[25px] px-[25px] bg-white rounded-xl my-4">
+    <div className="py-[25px] px-[25px] bg-white w-full rounded-xl border-2 border-zinc-100">
       <div className="flex justify-between items-center">
         <h5 className="text-[16px] text-gray-950 font-semibold mb-2">Email</h5>
         <svg

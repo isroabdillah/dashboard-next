@@ -55,14 +55,14 @@ export default function Dashboard() {
         <Welcome />
 
         <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col ">
-          <div className="lg:w-5/12 md:w-full h-100 flex flex-col justify-between gap-4">
+          <div className="lg:w-4/12 md:w-full h-100 flex flex-col justify-between gap-4">
             <Widget4 />
             <Widget5 />
           </div>
-          <div className="lg:w-2/12 md:w-full h-100 my-4 lg:my-0">
+          <div className="lg:w-3/12 md:w-full h-100 my-4 lg:my-0">
             <Widget6 />
           </div>
-          <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
+          <div className="lg:w-4/12 md:w-full h-100 my-4 lg:my-0">
             <Widget7 />
           </div>
         </div>
@@ -79,11 +79,11 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col">
+        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col my-4">
           <div className="lg:w-5/12 w-full h-100">
             <List />
           </div>
-          <div className="lg:w-7/12 w-full h-100">
+          <div className="lg:w-7/12 w-full h-100 mt-4 lg:mt-0">
             <Task />
           </div>
         </div>

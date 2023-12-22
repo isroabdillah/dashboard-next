@@ -2,7 +2,7 @@ import React from "react";
 
 export const Task = () => {
   return (
-    <div className="py-[25px] px-[25px] bg-white rounded-xl my-4">
+    <div className="py-[25px] px-[25px] bg-white rounded-xl w-full border-2 border-zinc-100">
       <div className="flex justify-between items-center">
         <h5 className="text-[16px] text-gray-950 font-semibold mb-2">Task Management</h5>
         <svg

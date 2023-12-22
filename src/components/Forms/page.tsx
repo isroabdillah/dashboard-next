@@ -2,14 +2,17 @@ import React from "react";
 
 export const Forms = () => {
   return (
-    <section className="max-w-4xl p-6 mx-auto bg-gradient-to-r from-orange-400 to-orange-500 rounded-md shadow-md dark:bg-gray-800 mt-20">
-      <h1 className="text-xl font-bold text-white capitalize dark:text-white">
+    <section className="max-w-6xl p-6 mx-auto bg-white rounded-lg border-2 border-zinc-100 dark:bg-gray-800 my-4">
+      <h1 className="text-xl font-bold text-gray-800 capitalize">
         Account settings
       </h1>
       <form>
         <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
           <div>
-            <label className="text-white dark:text-gray-200" htmlFor="username">
+            <label
+              className="text-gray-700 dark:text-gray-200"
+              htmlFor="username"
+            >
               Username
             </label>
             <input
@@ -21,7 +24,7 @@ export const Forms = () => {
 
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="emailAddress"
             >
               Email Address
@@ -34,7 +37,10 @@ export const Forms = () => {
           </div>
 
           <div>
-            <label className="text-white dark:text-gray-200" htmlFor="password">
+            <label
+              className="text-gray-700 dark:text-gray-200"
+              htmlFor="password"
+            >
               Password
             </label>
             <input
@@ -46,7 +52,7 @@ export const Forms = () => {
 
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="passwordConfirmation"
             >
               Password Confirmation
@@ -59,7 +65,7 @@ export const Forms = () => {
           </div>
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="passwordConfirmation"
             >
               Color
@@ -72,7 +78,7 @@ export const Forms = () => {
           </div>
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="passwordConfirmation"
             >
               Select
@@ -86,7 +92,7 @@ export const Forms = () => {
           </div>
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="passwordConfirmation"
             >
               Range
@@ -99,7 +105,7 @@ export const Forms = () => {
           </div>
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="passwordConfirmation"
             >
               Date
@@ -112,7 +118,7 @@ export const Forms = () => {
           </div>
           <div>
             <label
-              className="text-white dark:text-gray-200"
+              className="text-gray-700 dark:text-gray-200"
               htmlFor="passwordConfirmation"
             >
               Text Area
@@ -123,13 +129,13 @@ export const Forms = () => {
             ></textarea>
           </div>
           <div>
-            <label className="block text-sm font-medium text-white">
+            <label className="block text-sm font-medium text-gray-700">
               Image
             </label>
             <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
               <div className="space-y-1 text-center">
                 <svg
-                  className="mx-auto h-12 w-12 text-white"
+                  className="mx-auto h-12 w-12 text-gray-700"
                   stroke="currentColor"
                   fill="none"
                   viewBox="0 0 48 48"
@@ -155,9 +161,11 @@ export const Forms = () => {
                       className="sr-only"
                     />
                   </label>
-                  <p className="pl-1 text-white">or drag and drop</p>
+                  <p className="pl-1 text-gray-700">or drag and drop</p>
                 </div>
-                <p className="text-xs text-white">PNG, JPG, GIF up to 10MB</p>
+                <p className="text-xs text-gray-700">
+                  PNG, JPG, GIF up to 10MB
+                </p>
               </div>
             </div>
           </div>

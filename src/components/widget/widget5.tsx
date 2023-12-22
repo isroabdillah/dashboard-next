@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Widget5 = () => {
   return (
-    <div className="py-[25px] px-[25px] border-2 max-w-md border-zinc-100 bg-white rounded-xl lg:w-full flex items-center justify-between">
+    <div className="py-[25px] px-[25px] border-2 lg:max-w-md border-zinc-100 bg-white rounded-xl w-full flex items-center justify-between">
       <div className="flex items-center">
         <Image
           src="/icon-1.svg"
