@@ -16,8 +16,8 @@ import Widget4 from "@/components/widget/widget4";
 import Widget5 from "@/components/widget/widget5";
 import Widget6 from "@/components/widget/widget6";
 import Widget7 from "@/components/widget/widget7";
-import { List } from "@/components/Table/list";
-import { Task } from "@/components/Table/task";
+import List from "@/components/Table/list";
+import Task from "@/components/Table/task";
 import { Chart2 } from "@/components/Charts/chart2";
 import { Chart1 } from "@/components/Charts";
 import { Chart3 } from "@/components/Charts/chart3";
@@ -26,7 +26,50 @@ const handleClick = () => {
   console.log("Tombol diklik!");
 };
 
-const avatars = ["/avatar.png", "/avatar-2.png", "/avatar.png", "/avatar-2.png"];
+const avatars = [
+  "/avatar.png",
+  "/avatar-2.png",
+  "/avatar.png",
+  "/avatar-2.png",
+];
+const tasks = [
+  {
+    id: 1,
+    title: "UI",
+    startDate: "23/02/2023",
+    endDate: "27/02/2023",
+    status: "Success",
+  },
+  {
+    id: 2,
+    title: "UX",
+    startDate: "25/02/2023",
+    endDate: "01/03/2023",
+    status: "In Progress",
+  },
+  {
+    id: 3,
+    title: "UIUX",
+    startDate: "23/02/2023",
+    endDate: "27/02/2023",
+    status: "Success",
+  },
+];
+
+const emails = [
+  {
+    avatarSrc: "/Avatar-Profile-1.png",
+    authorName: "Arkatama Multi",
+    emailContent: "Revenue is the income that...",
+    time: "10.00 PM",
+  },
+  {
+    avatarSrc: "/Avatar-Profile-1.png",
+    authorName: "Arkatama Multi",
+    emailContent: "Revenue is the income that...",
+    time: "10.00 PM",
+  },
+];
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,10 +144,10 @@ export default function Dashboard() {
 
         <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col my-4">
           <div className="lg:w-5/12 w-full h-100">
-            <List />
+            <List emails={emails} />
           </div>
           <div className="lg:w-7/12 w-full h-100 mt-4 lg:mt-0">
-            <Task />
+            <Task tasks={tasks} />
           </div>
         </div>
 

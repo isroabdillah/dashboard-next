@@ -1,7 +1,18 @@
 import React from "react";
 import Image from "next/image";
 
-export const List = () => {
+interface EmailData {
+  avatarSrc: string;
+  authorName: string;
+  emailContent: string;
+  time: string;
+}
+
+interface ListProps {
+  emails: EmailData[];
+}
+
+const List: React.FC<ListProps> = ({ emails }: ListProps) => {
   return (
     <div className="py-[25px] px-[25px] bg-white w-full rounded-xl border-2 border-zinc-100">
       <div className="flex justify-between items-center">
@@ -19,63 +30,34 @@ export const List = () => {
           />
         </svg>
       </div>
-      <div className="py-4 border-b-[1px] border-gray-200 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image
-            src="/Avatar-Profile-1.png"
-            width={37}
-            height={37}
-            alt="Picture of the author"
-          />
-          <div className="ml-5">
-            <h5 className="text-[14px] text-gray-950 font-medium">
-              Arkatama Multi
-            </h5>
-            <p className="text-[12px] text-[#9CA3AF] font-light">
-              Revenue is the income that...
-            </p>
+      {emails.map((email, index) => (
+        <div
+          key={index}
+          className={`py-4 ${
+            index < emails.length - 1 ? "border-b-[1px] border-gray-200" : ""
+          } flex justify-between items-center`}
+        >
+          <div className="flex items-center">
+            <Image
+              src={email.avatarSrc}
+              width={37}
+              height={37}
+              alt={`Avatar ${index + 1}`}
+            />
+            <div className="ml-5">
+              <h5 className="text-[14px] text-gray-950 font-medium">
+                {email.authorName}
+              </h5>
+              <p className="text-[12px] text-[#9CA3AF] font-light">
+                {email.emailContent}
+              </p>
+            </div>
           </div>
+          <p className="text-[13px] text-[#9CA3AF] font-normal">{email.time}</p>
         </div>
-        <p className="text-[13px] text-[#9CA3AF] font-normal">10.00 PM</p>
-      </div>
-      <div className="py-4 border-b-[1px] border-gray-200 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image
-            src="/Avatar-Profile-1.png"
-            width={37}
-            height={37}
-            alt="Picture of the author"
-          />
-          <div className="ml-5">
-            <h5 className="text-[14px] text-gray-950 font-medium">
-              Arkatama Multi
-            </h5>
-            <p className="text-[12px] text-[#9CA3AF] font-light">
-              Revenue is the income that...
-            </p>
-          </div>
-        </div>
-        <p className="text-[13px] text-[#9CA3AF] font-normal">10.00 PM</p>
-      </div>
-      <div className="py-4 border-b-[1px] border-gray-200 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image
-            src="/Avatar-Profile-1.png"
-            width={37}
-            height={37}
-            alt="Picture of the author"
-          />
-          <div className="ml-5">
-            <h5 className="text-[14px] text-gray-950 font-medium">
-              Arkatama Multi
-            </h5>
-            <p className="text-[12px] text-[#9CA3AF] font-light">
-              Revenue is the income that...
-            </p>
-          </div>
-        </div>
-        <p className="text-[13px] text-[#9CA3AF] font-normal">10.00 PM</p>
-      </div>
+      ))}
     </div>
   );
 };
+
+export default List;
