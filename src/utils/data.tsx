@@ -12,6 +12,7 @@ import {
   SpinnerIcon,
   ModalIcon,
   NavbarIcon,
+  LoginIcon,
 } from "@/components/Icons";
 
 let column = [
@@ -167,6 +168,20 @@ const menus = [
     url: "/dropdowns",
     type: "components",
     icon: <DropdownIcon />,
+  },
+  {
+    id: 14,
+    name: "spinner",
+    url: "/spinner",
+    type: "components",
+    icon: <SpinnerIcon />,
+  },
+  {
+    id: 14,
+    name: "login",
+    url: "/login",
+    type: "components",
+    icon: <LoginIcon />,
   },
 ];
 

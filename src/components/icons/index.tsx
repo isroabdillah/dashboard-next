@@ -308,6 +308,30 @@ function SpinnerIcon() {
   );
 }
 
+function LoginIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="19"
+      height="17"
+      fill="none"
+      viewBox="0 0 19 17"
+    >
+      <path
+        fill="#DDD"
+        d="M12.922 0h-.85C9.668 0 8.466 0 7.72.747c-.747.747-.747 1.95-.747 4.353v6.8c0 2.405 0 3.607.747 4.354C8.466 17 9.668 17 12.07 17h.852c2.404 0 3.606 0 4.353-.747.747-.746.747-1.95.747-4.353V5.1c0-2.404 0-3.606-.747-4.353C16.528 0 15.326 0 12.922 0z"
+        opacity="0.5"
+      ></path>
+      <path
+        fill="#FF5959"
+        fillRule="evenodd"
+        d="M12.71 8.5a.637.637 0 00-.638-.637H2.745l1.667-1.428a.638.638 0 10-.83-.97L.607 8.016a.638.638 0 000 .97l2.975 2.55a.638.638 0 00.83-.97L2.746 9.139h9.326a.637.637 0 00.638-.638z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+}
+
 export {
   DashboardIcon,
   AlertIcon,
@@ -322,4 +346,5 @@ export {
   SpinnerIcon,
   ModalIcon,
   NavbarIcon,
+  LoginIcon
 };
