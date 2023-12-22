@@ -12,10 +12,10 @@ import Alert from "@/components/Alerts";
 import toast, { Toaster } from "react-hot-toast";
 import Buttons from "@/components/Buttons";
 import { Welcome } from "@/components/Cards/welcome";
-import { Widget4 } from "@/components/widget/widget4";
-import { Widget5 } from "@/components/widget/widget5";
-import { Widget6 } from "@/components/widget/widget6";
-import { Widget7 } from "@/components/widget/widget7";
+import Widget4 from "@/components/widget/widget4";
+import Widget5 from "@/components/widget/widget5";
+import Widget6 from "@/components/widget/widget6";
+import Widget7 from "@/components/widget/widget7";
 import { List } from "@/components/Table/list";
 import { Task } from "@/components/Table/task";
 import { Chart2 } from "@/components/Charts/chart2";
@@ -25,6 +25,8 @@ import { Chart3 } from "@/components/Charts/chart3";
 const handleClick = () => {
   console.log("Tombol diklik!");
 };
+
+const avatars = ["/avatar.png", "/avatar-2.png", "/avatar.png", "/avatar-2.png"];
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,20 +58,38 @@ export default function Dashboard() {
 
         <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col ">
           <div className="lg:w-4/12 md:w-full h-100 flex flex-col justify-between gap-4">
-            <Widget4 />
-            <Widget5 />
+            <Widget4
+              avatarSrc="/Avatar-Profile-1.png"
+              name="Arkatama Multi"
+              date="4 Days Ago"
+              age={27}
+            />
+            <Widget5
+              iconSrc="/icon-1.svg"
+              title="International Design Competition"
+              date="23/02/2023"
+            />
           </div>
           <div className="lg:w-3/12 md:w-full h-100 my-4 lg:my-0">
-            <Widget6 />
+            <Widget6
+              iconSrc="/icon-2.svg"
+              text="Revenue this month"
+              amount="$1030,32"
+            />
           </div>
           <div className="lg:w-4/12 md:w-full h-100 my-4 lg:my-0">
-            <Widget7 />
+            <Widget7
+              eventTitle="Design Competition"
+              eventTime="11 PM - 12 PM"
+              avatars={avatars}
+              location="Indonesia"
+            />
           </div>
         </div>
 
         <div className="lg:flex lg:flex-row w-full gap-4 flex-col mt-4 space-y-4 lg:space-y-0">
           <div className="lg:w-3/12 w-full">
-            <Chart2/>
+            <Chart2 />
           </div>
           <div className="lg:w-3/12 w-full">
             <Chart1 />
