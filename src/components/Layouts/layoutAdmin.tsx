@@ -12,7 +12,7 @@ const LayoutAdmin: React.FC<LayoutAdminProps> = ({ children }) => {
   const [collapsed, setSidebarCollapsed] = useState(true);
 
   return (
-    <>
+    <div className="flex">
       <Sidebar
         collapsed={collapsed}
         setSidebarCollapsed={setSidebarCollapsed}
@@ -24,7 +24,7 @@ const LayoutAdmin: React.FC<LayoutAdminProps> = ({ children }) => {
         />
         {children}
       </main>
-    </>
+    </div>
   );
 };
 
