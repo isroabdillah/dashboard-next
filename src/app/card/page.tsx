@@ -38,7 +38,11 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Card />
+                    <Card
+                      title="Card title"
+                      description="Some quick example text to build on the card title and make up the bulk of the card's content."
+                      imageSrc="/arkatama.jpeg"
+                    />
                   </div>
                 </div>
               </div>
@@ -47,10 +51,14 @@ export default function page() {
               <CopyBlock
                 language="jsx"
                 theme={dracula}
-                text={`import { Card } from "@/components/Cards";
+                text={`import Card from "@/components/Cards";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Card />
+  <Card
+    title="Card title"
+    description="Some quick example text to build on the card title and make up the bulk of the card's content."
+    imageSrc="/arkatama.jpeg"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
@@ -68,7 +76,11 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Quote />
+                    <Quote
+                      quoteText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                      famousPerson="Someone famous"
+                      sourceTitle="Source Title"
+                    />
                   </div>
                 </div>
               </div>
@@ -77,10 +89,14 @@ export default function page() {
               <CopyBlock
                 language="jsx"
                 theme={dracula}
-                text={`import { Card } from "@/components/Quote";
+                text={`import Quote from "@/components/Quote";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Quote />
+  <Quote
+    quoteText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+    famousPerson="Someone famous"
+    sourceTitle="Source Title"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
@@ -98,7 +114,11 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Feature />
+                    <Feature
+                      title="Special title treatment"
+                      description="With supporting text below as a natural lead-in to additional content."
+                      date="2 days ago"
+                    />
                   </div>
                 </div>
               </div>
@@ -107,10 +127,14 @@ export default function page() {
               <CopyBlock
                 language="jsx"
                 theme={dracula}
-                text={`import { Card } from "@/components/Feature";
+                text={`import Feature from "@/components/Feature";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Feature />
+  <Feature
+    title="Special title treatment"
+    description="With supporting text below as a natural lead-in to additional content."
+    date="2 days ago"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
@@ -118,18 +142,6 @@ export default function page() {
             }
           />
         </div>
-
-        {/* <div className="lg:flex lg:flex-row w-full gap-4 flex-col mt-4 space-y-4 lg:space-y-0">
-          <div className="lg:w-4/12 w-full">
-            <Card />
-          </div>
-          <div className="lg:w-4/12 w-full">
-            <Quote />
-          </div>
-          <div className="lg:w-4/12 w-full">
-            <Feature />
-          </div>
-        </div> */}
       </div>
     </LayoutAdmin>
   );

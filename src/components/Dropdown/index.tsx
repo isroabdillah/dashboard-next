@@ -1,25 +1,36 @@
-"use client"
-
 import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
-export const Dropdown = () => {
+export interface DropdownItem {
+  value: string;
+  label: string;
+}
+
+interface DropdownProps {
+  placeholder: string;
+  items: { value: string; label: string }[];
+  onSelect: (selectedValue: string) => void;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ placeholder, items, onSelect }) => {
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = event.target.value;
+    onSelect(selectedValue);
+  };
   return (
-    <Select>
-      <SelectTrigger className="py-[10px] px-[20px]">
-        <SelectValue placeholder="Arkatama Multisolusindo" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="light">Arkatama Multisolusindo</SelectItem>
-        <SelectItem value="dark">Digihub</SelectItem>
-        <SelectItem value="system">Countama</SelectItem>
-      </SelectContent>
-    </Select>
+    <div>
+      <select
+        onChange={(e) => onSelect(e.target.value)}
+        className="py-[10px] px-[20px] w-full"
+      >
+        <option value="">{placeholder}</option>
+        {items.map((item, index) => (
+          <option key={index} value={item.value}>
+            {item.label}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
+
+export default Dropdown;

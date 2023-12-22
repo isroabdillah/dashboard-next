@@ -1,9 +1,20 @@
-"use client"
-
 import React from "react";
 
-export const Spinners = () => {
-  return (
-    <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#FF5959]"></div>
-  );
+export interface SpinnerProps {
+  size?: number;
+  color?: string;
+}
+
+const Spinners: React.FC<SpinnerProps> = ({ size = 40, color = "#FF5959" }) => {
+  const spinnerStyle = {
+    width: `${size}px`,
+    height: `${size}px`,
+    border: `4px dashed ${color}`,
+    borderRadius: "50%",
+    animation: "spin 1s linear infinite",
+  };
+
+  return <div style={spinnerStyle}></div>;
 };
+
+export default Spinners;

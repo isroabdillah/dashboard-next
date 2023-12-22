@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import { Banner } from "@/components/Cards/banner";
@@ -6,10 +6,23 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PlaceholderCard from "@/components/Cards/placeholderCard";
 import { CopyBlock, dracula } from "react-code-blocks";
 
-import React from "react";
-import { Dropdown } from "@/components/Dropdown";
+import React, { useState } from "react";
+import Dropdown, { DropdownItem } from "@/components/Dropdown";
 
 export default function page() {
+  const [selectedValue, setSelectedValue] = useState<string>(""); // Menentukan tipe data string untuk selectedValue
+
+  const handleSelect = (selectedValue: string) => {
+    setSelectedValue(selectedValue);
+    console.log("Nilai yang dipilih:", selectedValue);
+  };
+
+  const dropdownItems: DropdownItem[] = [
+    { value: "light", label: "Arkatama Multisolusindo" },
+    { value: "dark", label: "Digihub" },
+    { value: "system", label: "Countama" },
+  ];
+
   return (
     <LayoutAdmin>
       <div className="px-4 mx-auto">
@@ -37,7 +50,11 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100">
-                    <Dropdown />
+                    <Dropdown
+                      placeholder="Select an item"
+                      items={dropdownItems}
+                      onSelect={(selectedValue) => handleSelect(selectedValue)}
+                    />
                   </div>
                 </div>
               </div>
@@ -47,9 +64,24 @@ export default function page() {
                 language="jsx"
                 theme={dracula}
                 text={`import { Dropdown } from "@/components/Dropdown";
+
+const [selectedValue, setSelectedValue] = useState<string>(""); 
+const handleSelect = (selectedValue: string) => {
+  setSelectedValue(selectedValue);
+  console.log("Nilai yang dipilih:", selectedValue);
+};
+const dropdownItems: DropdownItem[] = [
+  { value: "light", label: "Arkatama Multisolusindo" },
+  { value: "dark", label: "Digihub" },
+  { value: "system", label: "Countama" },
+];
                 
 <div className="lg:w-4/12 md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100">
-  <Dropdown />
+  <Dropdown
+    placeholder="Select an item"
+    items={dropdownItems}
+    onSelect={(selectedValue) => handleSelect(selectedValue)}
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}

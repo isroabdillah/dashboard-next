@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Banner } from "@/components/Cards/banner";
@@ -9,7 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Navbars } from "@/components/Navbar";
 import { Navbar2 } from "@/components/Navbar/navbar2";
 
-export default function page () {
+export default function page() {
   return (
     <LayoutAdmin>
       <div className="px-4 mx-auto">
@@ -37,7 +37,17 @@ export default function page () {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Navbar2/>
+                    <Navbar2
+                      logoSrc="/icon-arkatama.png"
+                      menuItems={[
+                        "Products",
+                        "Marketplace",
+                        "Partners",
+                        "Pricing",
+                      ]}
+                      signInText="Sign in"
+                      signUpText="Sign up"
+                    />
                   </div>
                 </div>
               </div>
@@ -49,7 +59,17 @@ export default function page () {
                 text={`import { Navbar2 } from "@/components/Navbar/navbar2";
 
 <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Navbar2/>
+  <Navbar2
+    logoSrc="/icon-arkatama.png"
+    menuItems={[
+      "Products",
+      "Marketplace",
+      "Partners",
+      "Pricing",
+    ]}
+    signInText="Sign in"
+    signUpText="Sign up"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}

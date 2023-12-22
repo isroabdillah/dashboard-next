@@ -1,17 +1,22 @@
 "use client";
 
 import React from "react";
-import Buttons from "@/components/Buttons";
 import Image from "next/image";
 
-const handleClick = () => {
-  console.log("Tombol diklik!");
-};
+interface Modal4Props {
+  imageSrc: string;
+  title: string;
+  description: string;
+}
 
-export const Modal4 = () => {
+export const Modal4: React.FC<Modal4Props> = ({
+  imageSrc,
+  title,
+  description,
+}: Modal4Props) => {  
   return (
     <div className="">
-      <div className="relative max-w-xl rounded-lg bg-white p-6 shadow-sm">
+      <div className="relative max-w-xl rounded-lg bg-white p-6 border-2 border-zinc-100">
         <button
           type="button"
           className="absolute -end-1 -top-1 rounded-full border border-gray-200 bg-white p-1 text-gray-400"
@@ -34,30 +39,16 @@ export const Modal4 = () => {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Image
             className="h-full w-full rounded-xl object-cover"
-            src="/arkatama.jpeg"
+            src={imageSrc}
             width={500}
             height={500}
             alt="Picture of the author"
           />
 
           <div>
-            <h2 className="text-lg font-medium">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </h2>
+            <h2 className="text-lg font-medium">{title}</h2>
 
-            <p className="mt-4 text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates, eos. Inventore dolor delectus commodi laudantium
-              adipisci, illum amet itaque optio!
-            </p>
-
-            <div className="flex justify-end pt-4">
-              <Buttons
-                typeButton="primary"
-                title="Find more"
-                onClickAction={handleClick}
-              />
-            </div>
+            <p className="mt-4 text-sm text-gray-500">{description}</p>
           </div>
         </div>
       </div>

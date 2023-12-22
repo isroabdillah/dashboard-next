@@ -9,6 +9,16 @@ import { Banner } from "@/components/Cards/banner";
 import React from "react";
 import { Tab2 } from "@/components/Tabs/tab2";
 
+const tabs = [
+  { href: "#page1", label: "Home" },
+  { href: "#page2", label: "Profile" },
+  { href: "#page3", label: "Messages" },
+  { href: "#page4", label: "Contact" },
+  { href: "#page5", label: "Settings" },
+];
+
+const activeTab = "#page1";
+
 export default function page() {
   return (
     <LayoutAdmin>
@@ -37,7 +47,7 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-full md:w-full h-100 p-2 flex justify-start pl-4 mt-4 rounded-xl border-2 border-zinc-100">
-                    <Tab2 />
+                    <Tab2 tabItems={tabs} activeTab={activeTab} />
                   </div>
                 </div>
               </div>
@@ -48,8 +58,18 @@ export default function page() {
                 theme={dracula}
                 text={`import { Tab2 } from "@/components/Tabs/tab2";
 
+const tabs = [
+  { href: "#page1", label: "Home" },
+  { href: "#page2", label: "Profile" },
+  { href: "#page3", label: "Messages" },
+  { href: "#page4", label: "Contact" },
+  { href: "#page5", label: "Settings" },
+];
+
+const activeTab = "#page1";                
+
 <div className="lg:w-full md:w-full h-100 p-2 flex justify-start pl-4 mt-4 rounded-xl border-2 border-zinc-100">
-  <Tab2 />
+  <Tab2 tabItems={tabs} activeTab={activeTab} />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
@@ -57,20 +77,6 @@ export default function page() {
             }
           />
         </div>
-
-        {/* <div className=" pt-4">
-          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
-            Tabs
-          </h4>
-          <div className="p-6 bg-white rounded-lg lg:w-full md:w-fit">
-            <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
-              Styles
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4 ">
-              <Tab2/>
-            </div>
-          </div>
-        </div> */}
       </div>
     </LayoutAdmin>
   );

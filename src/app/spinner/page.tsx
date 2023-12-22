@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Banner } from "@/components/Cards/banner";
@@ -6,7 +6,7 @@ import PlaceholderCard from "@/components/Cards/placeholderCard";
 import { CopyBlock, dracula } from "react-code-blocks";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { Spinners } from "@/components/spinners";
+import Spinners from "@/components/spinners";
 
 export default function Spinner() {
   return (
@@ -36,7 +36,7 @@ export default function Spinner() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Spinners/>
+                    <Spinners size={50} color="#FF5959;" />{" "}
                   </div>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function Spinner() {
                 text={`import { Spinners } from "@/components/spinners";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Spinners/>
+  <Spinners size={50} color="#FF5959;" /> 
 </div>`}
                 codeBlock
                 showLineNumbers={true}

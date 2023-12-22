@@ -1,16 +1,22 @@
-"use client";
-
 import React from "react";
 import Buttons from "../Buttons";
+
+interface Modal2Props {
+  title: string;
+  message: string;
+}
 
 const handleClick = () => {
   console.log("Tombol diklik!");
 };
 
-export const Modal2 = () => {
+export const Modal2: React.FC<Modal2Props> = ({
+  title,
+  message,
+}: Modal2Props) => {
   return (
     <div
-      className="rounded-2xl bg-white p-4 shadow-sm sm:p-6 lg:p-8"
+      className="rounded-2xl bg-white p-4 sm:p-6 lg:p-8 border-2 border-zinc-100"
       role="alert"
     >
       <div className="flex items-center gap-4">
@@ -29,13 +35,10 @@ export const Modal2 = () => {
           </svg>
         </span>
 
-        <p className="font-medium sm:text-lg">New message!</p>
+        <p className="font-medium sm:text-lg">{title}</p>
       </div>
 
-      <p className="mt-4 text-gray-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ea quo
-        unde vel adipisci blanditiis voluptates eum. Nam, cum minima?
-      </p>
+      <p className="mt-4 text-gray-500">{message}</p>
 
       <div className="mt-6 sm:flex sm:gap-4">
         <Buttons

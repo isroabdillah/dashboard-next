@@ -29,7 +29,8 @@ export default function page() {
 
         <div className="pt-4">
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
-            Form          </h4>
+            Form{" "}
+          </h4>
           <PlaceholderCard
             children={
               <div id="design">
@@ -55,10 +56,6 @@ export default function page() {
             }
           />
         </div>
-
-        {/* <div className="pb-4 m-4">
-        <Forms />
-      </div> */}
       </div>
     </LayoutAdmin>
   );

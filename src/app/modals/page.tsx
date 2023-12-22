@@ -39,7 +39,10 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Modal2 />
+                    <Modal2
+                      title="New Message!"
+                      message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ea quo unde vel adipisci blanditiis voluptates eum. Nam, cum minima?"
+                    />
                   </div>
                 </div>
               </div>
@@ -51,7 +54,10 @@ export default function page() {
                 text={`import { Modal2 } from "@/components/modals/modal2";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Modal2 />
+  <Modal2
+    title="New Message!"
+    message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ea quo unde vel adipisci blanditiis voluptates eum. Nam, cum minima?"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
@@ -69,7 +75,11 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Modal3 />
+                    <Modal3
+                      title="Your order is on the way"
+                      subtitle="Thanks for your purchase, we're getting it ready!"
+                      buttonText="Track Order"
+                    />
                   </div>
                 </div>
               </div>
@@ -78,10 +88,14 @@ export default function page() {
               <CopyBlock
                 language="jsx"
                 theme={dracula}
-                text={`import { Modal2 } from "@/components/modals/modal3";
+                text={`import { Modal3 } from "@/components/modals/modal3";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Modal3 />
+  <Modal3
+    title="Your order is on the way"
+    subtitle="Thanks for your purchase, we're getting it ready!"
+    buttonText="Track Order"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
@@ -99,7 +113,13 @@ export default function page() {
               <div id="design">
                 <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                   <div className="lg:w-6/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Modal4 />
+                    <Modal4
+                      imageSrc="/arkatama.jpeg"
+                      title="Judul Modal Lorem ipsum dolor sit amet consectetur."
+                      description="Deskripsi dari modal ini. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptates, eos.  
+                      adipisci, illum amet itaque optio!"
+                    />
                   </div>
                 </div>
               </div>
@@ -108,10 +128,16 @@ export default function page() {
               <CopyBlock
                 language="jsx"
                 theme={dracula}
-                text={`import { Modal2 } from "@/components/modals/modal4";
+                text={`import { Modal4 } from "@/components/modals/modal4";
 
 <div className="lg:w-6/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-  <Modal4 />
+  <Modal4
+    imageSrc="/arkatama.jpeg"
+    title="Judul Modal Lorem ipsum dolor sit amet consectetur."
+    description="Deskripsi dari modal ini. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Voluptates, eos.  
+    adipisci, illum amet itaque optio!"
+  />
 </div>`}
                 codeBlock
                 showLineNumbers={true}
