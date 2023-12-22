@@ -12,7 +12,9 @@ import { Navbars } from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="">sd</div>
+    <div className="">
+      
+    </div>
     
   );
 }
