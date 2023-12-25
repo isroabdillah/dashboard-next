@@ -1,25 +1,34 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import Image from "next/image";
 
 function App() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-3/12 relative">
-        <img
+        <Image
+          className="absolute -top-16 -right-16"
           src="/ornamen1.png"
-          className="absolute -top-16 -right-16" 
-          style={{zIndex: "-9999"}}
+          style={{ zIndex: "-9999" }}
+          width={147}
+          height={262}
+          alt=""
         />
         <div className="w-full p-6 bg-white rounded-lg shadow-lg">
           <div className="flex justify-center mb-8">
-            <img src="/logoarkatama.png" alt="Logo" className=" " />
+            <Image
+              className=""
+              src="/logoarkatama.png"
+              width={162}
+              height={32}
+              alt=""
+            />
           </div>
           <h1 className="text-lg font-semibold text-gray-500 mt-8 mb-3">
-          Adventure starts here 🚀
+            Adventure starts here 🚀
           </h1>
           <p className="text-base text-gray-500 mt-0 mb-6">
-          Make your wa massage ezy
+            Make your wa massage ezy
           </p>
           <form>
             <div className="mb-6">
@@ -80,10 +89,13 @@ function App() {
             &copy; 2023 Arkatama
           </p>
         </div>
-        <img
+        <Image
           src="/ornamen2.png"
-          className="absolute -bottom-14 -left-20" 
-          style={{zIndex: "-9999"}}
+          className="absolute -bottom-14 -left-20"
+          style={{ zIndex: "-9999" }}
+          width={147}
+          height={262}
+          alt=""
         />
       </div>
     </div>
