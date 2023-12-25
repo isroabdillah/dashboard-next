@@ -42,21 +42,14 @@ export default function page() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Tab 1
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-full md:w-full h-100 p-2 flex justify-start pl-4 mt-4 rounded-xl border-2 border-zinc-100">
-                    <Tab2 tabItems={tabs} activeTab={activeTab} />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import { Tab2 } from "@/components/Tabs/tab2";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import { Tab2 } from "@/components/Tabs/tab2";
 
 const tabs = [
   { href: "#page1", label: "Home" },
@@ -71,11 +64,20 @@ const activeTab = "#page1";
 <div className="lg:w-full md:w-full h-100 p-2 flex justify-start pl-4 mt-4 rounded-xl border-2 border-zinc-100">
   <Tab2 tabItems={tabs} activeTab={activeTab} />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-full md:w-full h-100 p-2 flex justify-start pl-4 mt-4 rounded-xl border-2 border-zinc-100">
+                  <Tab2 tabItems={tabs} activeTab={activeTab} />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
       </div>
     </LayoutAdmin>

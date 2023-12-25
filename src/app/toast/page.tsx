@@ -50,10 +50,9 @@ export default function Toast() {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
               <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
@@ -72,7 +71,7 @@ export default function Toast() {
                   type="button"
                   className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:text-red-800 dark:text-red-500 dark:focus:text-red-400"
                 >
-                  Don't allow
+                  Dont allow
                 </button>
                 <button
                   type="button"
@@ -109,43 +108,14 @@ export default function Toast() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Toast
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-full md:w-full h-100 p-2 flex flex-wrap gap-4 mt-4 rounded-xl border-2 border-zinc-100">
-                    <Buttons
-                      typeButton="full-soft-primary"
-                      title="Toast"
-                      onClickAction={notify}
-                    />
-
-                    <Buttons
-                      typeButton="full-soft-success"
-                      title="Success Toast"
-                      onClickAction={success}
-                    />
-
-                    <Buttons
-                      typeButton="full-soft-danger"
-                      title="Error Toast"
-                      onClickAction={error}
-                    />
-
-                    <Buttons
-                      typeButton="full-soft-info"
-                      title="Error custom"
-                      onClickAction={notif}
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import toast, { Toaster } from "react-hot-toast";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import toast, { Toaster } from "react-hot-toast";
 import Buttons from "@/components/Buttons";
 
 <div className="lg:w-full md:w-full h-100 p-2 flex flex-wrap gap-4 mt-4 rounded-xl border-2 border-zinc-100">
@@ -173,48 +143,43 @@ import Buttons from "@/components/Buttons";
     onClickAction={notif}
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
-        </div>
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-full md:w-full h-100 p-2 flex flex-wrap gap-4 mt-4 rounded-xl border-2 border-zinc-100">
+                  <Buttons
+                    typeButton="full-soft-primary"
+                    title="Toast"
+                    onClickAction={notify}
+                  />
 
-        {/* <div className="mx-4 pt-4 mb-4">
-          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
-            Toasts
-          </h4>
-          <div className="p-6 bg-white rounded-lg lg:w-full">
-            <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
-              Styles
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Buttons
-                typeButton="full-soft-primary"
-                title="Toast"
-                onClickAction={notify}
-              />
+                  <Buttons
+                    typeButton="full-soft-success"
+                    title="Success Toast"
+                    onClickAction={success}
+                  />
 
-              <Buttons
-                typeButton="full-soft-success"
-                title="Success Toast"
-                onClickAction={success}
-              />
+                  <Buttons
+                    typeButton="full-soft-danger"
+                    title="Error Toast"
+                    onClickAction={error}
+                  />
 
-              <Buttons
-                typeButton="full-soft-danger"
-                title="Error Toast"
-                onClickAction={error}
-              />
-
-              <Buttons
-                typeButton="full-soft-info"
-                title="Error custom"
-                onClickAction={notif}
-              />
+                  <Buttons
+                    typeButton="full-soft-info"
+                    title="Error custom"
+                    onClickAction={notif}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div> */}
+          </PlaceholderCard>
+        </div>
       </div>
 
       <Toaster position="top-right" reverseOrder={false} />

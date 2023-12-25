@@ -9,7 +9,7 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import React, { useState } from "react";
 import Dropdown, { DropdownItem } from "@/components/Dropdown";
 
-export default function page() {
+export default function Page() {
   const [selectedValue, setSelectedValue] = useState<string>(""); // Menentukan tipe data string untuk selectedValue
 
   const handleSelect = (selectedValue: string) => {
@@ -45,25 +45,14 @@ export default function page() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Dropdown 1
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-4/12 md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100">
-                    <Dropdown
-                      placeholder="Select an item"
-                      items={dropdownItems}
-                      onSelect={(selectedValue) => handleSelect(selectedValue)}
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import { Dropdown } from "@/components/Dropdown";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import { Dropdown } from "@/components/Dropdown";
 
 const [selectedValue, setSelectedValue] = useState<string>(""); 
 const handleSelect = (selectedValue: string) => {
@@ -83,11 +72,24 @@ const dropdownItems: DropdownItem[] = [
     onSelect={(selectedValue) => handleSelect(selectedValue)}
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-4/12 md:w-full h-100 mt-4 rounded-xl border-2 border-zinc-100">
+                  <Dropdown
+                    placeholder="Select an item"
+                    items={dropdownItems}
+                    onSelect={(selectedValue) => handleSelect(selectedValue)}
+                  />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
       </div>
     </LayoutAdmin>

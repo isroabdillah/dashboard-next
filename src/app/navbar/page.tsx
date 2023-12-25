@@ -30,33 +30,16 @@ export default function page() {
 
         <div className="pt-4">
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
-            Navbar 2
+            Navbar 1
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Navbar2
-                      logoSrc="/icon-arkatama.png"
-                      menuItems={[
-                        "Products",
-                        "Marketplace",
-                        "Partners",
-                        "Pricing",
-                      ]}
-                      signInText="Sign in"
-                      signUpText="Sign up"
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import { Navbar2 } from "@/components/Navbar/navbar2";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import { Navbar2 } from "@/components/Navbar/navbar2";
 
 <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <Navbar2
@@ -71,11 +54,30 @@ export default function page() {
     signUpText="Sign up"
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <Navbar2
+                    logoSrc="/icon-arkatama.png"
+                    menuItems={[
+                      "Products",
+                      "Marketplace",
+                      "Partners",
+                      "Pricing",
+                    ]}
+                    signInText="Sign in"
+                    signUpText="Sign up"
+                  />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
       </div>
     </LayoutAdmin>

@@ -33,25 +33,14 @@ export default function page() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Card 1
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Card
-                      title="Card title"
-                      description="Some quick example text to build on the card title and make up the bulk of the card's content."
-                      imageSrc="/arkatama.jpeg"
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import Card from "@/components/Cards";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import Card from "@/components/Cards";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <Card
@@ -60,36 +49,38 @@ export default function page() {
     imageSrc="/arkatama.jpeg"
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <Card
+                    title="Card title"
+                    description="Some quick example text to build on the card title and make up the bulk of the card's content."
+                    imageSrc="/arkatama.jpeg"
+                  />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
 
         <div className="pt-4 mt-4">
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Card quote
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Quote
-                      quoteText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      famousPerson="Someone famous"
-                      sourceTitle="Source Title"
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import Quote from "@/components/Quote";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import Quote from "@/components/Quote";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <Quote
@@ -98,36 +89,38 @@ export default function page() {
     sourceTitle="Source Title"
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <Quote
+                    quoteText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                    famousPerson="Someone famous"
+                    sourceTitle="Source Title"
+                  />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
 
         <div className="pt-4 mt-4">
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Card Feature
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Feature
-                      title="Special title treatment"
-                      description="With supporting text below as a natural lead-in to additional content."
-                      date="2 days ago"
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import Feature from "@/components/Feature";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import Feature from "@/components/Feature";
 
 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <Feature
@@ -136,11 +129,24 @@ export default function page() {
     date="2 days ago"
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <Feature
+                    title="Special title treatment"
+                    description="With supporting text below as a natural lead-in to additional content."
+                    date="2 days ago"
+                  />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
       </div>
     </LayoutAdmin>

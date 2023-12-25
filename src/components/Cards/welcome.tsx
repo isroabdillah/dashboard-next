@@ -20,7 +20,7 @@ export const Welcome = () => {
           Good morning, Arkatama
         </h3>
         <p className="mt-2 text-sm font-normal text-white">
-          Don't forget to be happy for today, you guys are amazing
+          Dont forget to be happy for today, you guys are amazing
         </p>
       </div>
       <div className="md:ml-auto mr-2">

@@ -31,30 +31,32 @@ export default function page() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Form{" "}
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Forms />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import { Forms } from "@/components/Forms/page";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import { Forms } from "@/components/Forms/page";
 
 <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <Forms />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-full md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <Forms />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
       </div>
     </LayoutAdmin>

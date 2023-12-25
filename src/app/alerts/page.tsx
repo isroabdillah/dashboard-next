@@ -32,42 +32,16 @@ export default function Alerts() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Alerts 1
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-full md:w-full h-100 p-2 flex mt-4 flex-wrap gap-4 rounded-xl border-2 border-zinc-100">
-                    <Alertss
-                      type="success"
-                      title="Success!"
-                      message="Operation completed successfully."
-                    />
-
-                    <Alertss
-                      type="warning"
-                      title="Warning!"
-                      message="Operation completed successfully."
-                    />
-                    <Alertss
-                      type="danger"
-                      title="Danger!"
-                      message="Operation completed successfully."
-                    />
-
-                    <Alertss
-                      type="info"
-                      title="Info!"
-                      message="Operation completed successfully."
-                    />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import { Alertss } from "@/components/Alerts/Alertss";
+              <div className="pt-4">
+                childrenCode=
+                {
+                  <CopyBlock
+                    language="jsx"
+                    theme={dracula}
+                    text={`import { Alertss } from "@/components/Alerts/Alertss";
 
 <div className="lg:w-full md:w-full h-100 p-2 flex mt-4 flex-wrap gap-4 rounded-xl border-2 border-zinc-100">
   <Alertss
@@ -93,49 +67,44 @@ export default function Alerts() {
     message="Operation completed successfully."
   />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                    codeBlock
+                    showLineNumbers={true}
+                  />
+                }
+              </div>
             }
-          />
-        </div>
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-full md:w-full h-100 p-2 flex mt-4 flex-wrap gap-4 rounded-xl border-2 border-zinc-100">
+                  <Alertss
+                    type="success"
+                    title="Success!"
+                    message="Operation completed successfully."
+                  />
 
-        {/* <div className=" pt-4">
-          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
-            Alerts
-          </h4>
-          <div className="p-6 bg-white rounded-lg lg:w-full md:w-fit">
-            <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
-              Styles
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4 ">
-              
-                <Alertss
-                  type="success"
-                  title="Success!"
-                  message="Operation completed successfully."
-                />
+                  <Alertss
+                    type="warning"
+                    title="Warning!"
+                    message="Operation completed successfully."
+                  />
+                  <Alertss
+                    type="danger"
+                    title="Danger!"
+                    message="Operation completed successfully."
+                  />
 
-                <Alertss
-                  type="warning"
-                  title="Warning!"
-                  message="Operation completed successfully."
-                />
-                <Alertss
-                  type="danger"
-                  title="Danger!"
-                  message="Operation completed successfully."
-                />
-                  
-                <Alertss
-                  type="info"
-                  title="Info!"
-                  message="Operation completed successfully."
-                />
-              
+                  <Alertss
+                    type="info"
+                    title="Info!"
+                    message="Operation completed successfully."
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div> */}
+          </PlaceholderCard>
+
+        </div>
       </div>
     </LayoutAdmin>
   );

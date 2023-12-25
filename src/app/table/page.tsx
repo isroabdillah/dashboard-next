@@ -73,17 +73,14 @@ export default function page() {
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Table 1
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <Table header={column} isian={isi} />
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import Table from "@/components/Table";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import Table from "@/components/Table";
 
 let column = [
   {
@@ -123,32 +120,30 @@ let isi = [
 ];
 
 <Table header={column} isian={isi} />`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <Table header={column} isian={isi} />
+            </div>
+          </PlaceholderCard>
         </div>
 
         <div className="pt-4 mt-4">
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             List
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-5/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <List emails={emails} />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import List from "@/components/Table/list";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import List from "@/components/Table/list";
 const emails = [
   {
     avatarSrc: "/Avatar-Profile-1.png",
@@ -167,32 +162,34 @@ const emails = [
 <div className="lg:w-5/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <List emails={emails} />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-5/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <List emails={emails} />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
 
         <div className="pt-4 mt-4">
           <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
             Task
           </h4>
+
           <PlaceholderCard
-            children={
-              <div id="design">
-                <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
-                  <div className="lg:w-7/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                    <Task tasks={tasks} />
-                  </div>
-                </div>
-              </div>
-            }
             childrenCode={
-              <CopyBlock
-                language="jsx"
-                theme={dracula}
-                text={`import Task List from "@/components/Table/Task";
+              <div className="pt-4">
+                <CopyBlock
+                  language="jsx"
+                  theme={dracula}
+                  text={`import Task List from "@/components/Table/Task";
 
 const tasks = [
   {
@@ -221,22 +218,21 @@ const tasks = [
 <div className="lg:w-5/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
   <Task tasks={tasks} />
 </div>`}
-                codeBlock
-                showLineNumbers={true}
-              />
+                  codeBlock
+                  showLineNumbers={true}
+                />
+              </div>
             }
-          />
+          >
+            <div id="design">
+              <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
+                <div className="lg:w-7/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
+                  <Task tasks={tasks} />
+                </div>
+              </div>
+            </div>
+          </PlaceholderCard>
         </div>
-
-        {/* <Table header={column} isian={isi} />
-        <div className="lg:flex lg:flex-row lg:w-full gap-4 md:flex-col">
-          <div className="lg:w-5/12 w-full h-100">
-            <List />
-          </div>
-          <div className="lg:w-7/12 w-full h-100">
-            <Task />
-          </div>
-        </div> */}
       </div>
     </LayoutAdmin>
   );

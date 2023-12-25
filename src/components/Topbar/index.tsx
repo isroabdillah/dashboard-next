@@ -1,6 +1,5 @@
 "use client";
 import { LuAlignJustify, LuSearch, LuBellDot } from "react-icons/lu";
-import { Dropdown } from "../Dropdown";
 import Image from "next/image";
 
 interface Topbar {
