@@ -5,6 +5,7 @@ import { menus } from "@/utils/data";
 import { LuChevronDown } from "react-icons/lu";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 interface Sidebar {
   collapsed: boolean;
@@ -35,11 +36,23 @@ const Sidebar: React.FC<Sidebar> = ({ collapsed, setSidebarCollapsed }) => {
         <div className="flex justify-between items-center rounded-lg px-3 py-2 text-slate-900 dark:text-white">
           {collapsed ? (
             <button onClick={() => setSidebarCollapsed(!collapsed)}>
-              <img src="/logoarkatama.png" alt="" />
+              <Image
+                className=""
+                src="/logoarkatama.png"
+                width={162}
+                height={32}
+                alt=""
+              />
             </button>
           ) : (
             <button onClick={() => setSidebarCollapsed(!collapsed)}>
-              <img src="/icon-arkatama.png" alt="" />
+              <Image
+                className=""
+                src="/icon-arkatama.png"
+                width={162}
+                height={32}
+                alt=""
+              />
             </button>
           )}
         </div>

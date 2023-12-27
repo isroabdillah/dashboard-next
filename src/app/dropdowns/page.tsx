@@ -11,7 +11,7 @@ import Dropdown, { DropdownItem } from "@/components/Dropdown";
 import { Footers } from "@/components/Footers/footers";
 
 export default function Page() {
-  const [selectedValue, setSelectedValue] = useState<string>(""); // Menentukan tipe data string untuk selectedValue
+  const [selectedValue, setSelectedValue] = useState<string>("");
 
   const handleSelect = (selectedValue: string) => {
     setSelectedValue(selectedValue);

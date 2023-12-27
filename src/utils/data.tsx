@@ -13,7 +13,7 @@ import {
   ModalIcon,
   NavbarIcon,
   LoginIcon,
-} from "@/components/Icons";
+} from "@/components/icons";
 
 let column = [
   {

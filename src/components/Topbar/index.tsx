@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { LuAlignJustify, LuSearch, LuBellDot } from "react-icons/lu";
 import Image from "next/image";
 
@@ -8,6 +9,12 @@ interface Topbar {
 }
 
 const Topbar: React.FC<Topbar> = ({ collapsed, setSidebarCollapsed }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <header className="bg-white w-full h-16 px-8 flex justify-between items-center">
       <div className="flex items-center gap-5">
@@ -32,12 +39,32 @@ const Topbar: React.FC<Topbar> = ({ collapsed, setSidebarCollapsed }) => {
         </div>
       </div>
       <div className="flex items-center gap-5">
-        <Image
-          src="/bel.svg"
-          width={44}
-          height={44}
-          alt="Picture of the author"
-        />
+        <div className="relative cursor-pointer" onClick={toggleDropdown}>
+          <Image
+            src="/bel.svg"
+            width={44}
+            height={44}
+            alt="Picture of the author"
+          />
+          {isDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+              <div className="py-1">
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Notification 1
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Notification 2
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
         <div className="flex items-center border-l-[1px] border-zinc-300 pl-4 ">
           <Image
             src="/Avatar-Profile-1.png"
@@ -46,8 +73,12 @@ const Topbar: React.FC<Topbar> = ({ collapsed, setSidebarCollapsed }) => {
             alt="Picture of the author"
           />
           <div className="lg:flex flex-col px-4 hidden ">
-            <h6 className="text-gray-900 text-sm not-italic font-medium leading-5">Arkatama</h6>
-            <p className="text-gray-900 text-sm font-light leading-5">info@arkatama.com</p>
+            <h6 className="text-gray-900 text-sm not-italic font-medium leading-5">
+              Arkatama
+            </h6>
+            <p className="text-gray-900 text-sm font-light leading-5">
+              info@arkatama.com
+            </p>
           </div>
         </div>
       </div>

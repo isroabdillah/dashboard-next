@@ -23,7 +23,7 @@ const LayoutAdmin: React.FC<LayoutAdminProps> = ({ children }) => {
           collapsed ? "md:w-[calc(100%_-_15rem)]" : "md:w-[calc(100%_-_5rem)]"
         } w-full space-y-6 min-h-screen flex flex-col justify-between`}
       >
-        <main>
+        <main className="space-y-4">
           <Topbar
             collapsed={collapsed}
             setSidebarCollapsed={setSidebarCollapsed}
