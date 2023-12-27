@@ -8,6 +8,7 @@ import PlaceholderCard from "@/components/Cards/placeholderCard";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 import React from "react";
+import { Footers } from "@/components/Footers/footers";
 
 export default function Alerts() {
   return (
@@ -106,6 +107,7 @@ export default function Alerts() {
 
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

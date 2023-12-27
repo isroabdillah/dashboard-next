@@ -9,6 +9,7 @@ import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Banner } from "@/components/Cards/banner";
+import { Footers } from "@/components/Footers/footers";
 
 export default function Toast() {
   const notify = () => toast("toast default");
@@ -183,6 +184,7 @@ import Buttons from "@/components/Buttons";
       </div>
 
       <Toaster position="top-right" reverseOrder={false} />
+      <Footers/>
     </LayoutAdmin>
   );
 }

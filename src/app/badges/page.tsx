@@ -4,6 +4,7 @@ import React from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Banner } from "@/components/Cards/banner";
 import Pillsx from "@/components/Badges/pills2";
+import { Footers } from "@/components/Footers/footers";
 
 export default function page() {
   return (
@@ -25,25 +26,24 @@ export default function page() {
         </div>
 
         <div className=" pt-4">
-        <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
-          Badges
-        </h4>
-        <div className="p-6 bg-white rounded-lg lg:w-full">
-          <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
-            Styles
-          </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Pills status="success"/>
-            <Pills status="danger"/>
-            <Pills status="warning"/>
+          <h4 className="mb-5 text-gray-900 font-semibold text-[18px] ">
+            Badges
+          </h4>
+          <div className="p-6 bg-white rounded-lg lg:w-full">
+            <p className="pb-4 font-medium text-[13px] border-b-[1px] border-zinc-300 text-[#FF5959]">
+              Styles
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Pills status="success" />
+              <Pills status="danger" />
+              <Pills status="warning" />
 
-            <Pillsx typePills="primary" title="djsadh"/>
+              <Pillsx typePills="primary" title="djsadh" />
+            </div>
           </div>
         </div>
       </div>
-
-
-      </div>
+      <Footers />
     </LayoutAdmin>
   );
 }

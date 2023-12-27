@@ -10,6 +10,7 @@ import PlaceholderCard from "@/components/Cards/placeholderCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Banner } from "@/components/Cards/banner";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { Footers } from "@/components/Footers/footers";
 
 const handleClick = () => {
   console.log("Tombol diklik!");
@@ -289,6 +290,7 @@ export default function page() {
           </div>
         </PlaceholderCard>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

@@ -8,6 +8,7 @@ import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Navbars } from "@/components/Navbar";
 import { Navbar2 } from "@/components/Navbar/navbar2";
+import { Footers } from "@/components/Footers/footers";
 
 export default function page() {
   return (
@@ -80,6 +81,7 @@ export default function page() {
           </PlaceholderCard>
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

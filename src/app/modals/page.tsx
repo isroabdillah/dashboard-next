@@ -10,6 +10,7 @@ import { Modal3 } from "@/components/modals/modal3";
 import { Modal4 } from "@/components/modals/modal4";
 import PlaceholderCard from "@/components/Cards/placeholderCard";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { Footers } from "@/components/Footers/footers";
 
 export default function page() {
   return (
@@ -152,6 +153,7 @@ export default function page() {
           </PlaceholderCard>
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

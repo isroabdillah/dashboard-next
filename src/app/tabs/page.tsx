@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Banner } from "@/components/Cards/banner";
 import React from "react";
 import { Tab2 } from "@/components/Tabs/tab2";
+import { Footers } from "@/components/Footers/footers";
 
 const tabs = [
   { href: "#page1", label: "Home" },
@@ -80,6 +81,7 @@ const activeTab = "#page1";
           </PlaceholderCard>
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

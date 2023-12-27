@@ -9,6 +9,7 @@ import { Quote } from "@/components/Cards/quote";
 import LayoutAdmin from "@/components/Layouts/layoutAdmin";
 import React from "react";
 import { Banner } from "@/components/Cards/banner";
+import { Footers } from "@/components/Footers/footers";
 
 export default function page() {
   return (
@@ -149,6 +150,7 @@ export default function page() {
           </PlaceholderCard>
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

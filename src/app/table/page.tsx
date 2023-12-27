@@ -11,6 +11,7 @@ import PlaceholderCard from "@/components/Cards/placeholderCard";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 import { Banner } from "@/components/Cards/banner";
+import { Footers } from "@/components/Footers/footers";
 
 export default function page() {
   const emails = [
@@ -234,6 +235,7 @@ const tasks = [
           </PlaceholderCard>
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

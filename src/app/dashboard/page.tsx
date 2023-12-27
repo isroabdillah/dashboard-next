@@ -21,6 +21,7 @@ import Task from "@/components/Table/task";
 import { Chart2 } from "@/components/Charts/chart2";
 import { Chart1 } from "@/components/Charts";
 import { Chart3 } from "@/components/Charts/chart3";
+import { Footers } from "@/components/Footers/footers";
 
 const handleClick = () => {
   console.log("Tombol diklik!");
@@ -120,7 +121,7 @@ export default function Dashboard() {
               amount="$1030,32"
             />
           </div>
-          <div className="lg:w-4/12 md:w-full h-100 my-4 lg:my-0">
+          <div className="lg:w-5/12 md:w-full h-100 my-4 lg:my-0">
             <Widget7
               eventTitle="Design Competition"
               eventTime="11 PM - 12 PM"
@@ -157,6 +158,7 @@ export default function Dashboard() {
       <Button typeButton="primary" title="TOAST" onClickAction={notify}/> */}
         <Toaster />
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }

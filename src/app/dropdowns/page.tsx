@@ -8,6 +8,7 @@ import { CopyBlock, dracula } from "react-code-blocks";
 
 import React, { useState } from "react";
 import Dropdown, { DropdownItem } from "@/components/Dropdown";
+import { Footers } from "@/components/Footers/footers";
 
 export default function Page() {
   const [selectedValue, setSelectedValue] = useState<string>(""); // Menentukan tipe data string untuk selectedValue
@@ -92,6 +93,7 @@ const dropdownItems: DropdownItem[] = [
           </PlaceholderCard>
         </div>
       </div>
+      <Footers/>
     </LayoutAdmin>
   );
 }
