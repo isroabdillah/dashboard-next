@@ -60,7 +60,6 @@ export default function page() {
           </PlaceholderCard>
         </div>
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

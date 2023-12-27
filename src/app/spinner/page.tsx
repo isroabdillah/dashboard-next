@@ -61,7 +61,6 @@ export default function Spinner() {
         </div>
       </div>
       <div className="p-6"></div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

@@ -235,7 +235,6 @@ const tasks = [
           </PlaceholderCard>
         </div>
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

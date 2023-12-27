@@ -184,7 +184,6 @@ import Buttons from "@/components/Buttons";
       </div>
 
       <Toaster position="top-right" reverseOrder={false} />
-      <Footers/>
     </LayoutAdmin>
   );
 }

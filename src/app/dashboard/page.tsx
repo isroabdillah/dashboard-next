@@ -158,7 +158,6 @@ export default function Dashboard() {
       <Button typeButton="primary" title="TOAST" onClickAction={notify}/> */}
         <Toaster />
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

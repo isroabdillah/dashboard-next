@@ -81,7 +81,6 @@ const activeTab = "#page1";
           </PlaceholderCard>
         </div>
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

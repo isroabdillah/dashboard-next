@@ -129,7 +129,6 @@ export default function Chart() {
           </PlaceholderCard>
         </div>
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

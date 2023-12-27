@@ -107,7 +107,6 @@ export default function Alerts() {
 
         </div>
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }

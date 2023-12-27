@@ -93,7 +93,6 @@ const dropdownItems: DropdownItem[] = [
           </PlaceholderCard>
         </div>
       </div>
-      <Footers/>
     </LayoutAdmin>
   );
 }
