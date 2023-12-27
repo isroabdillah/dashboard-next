@@ -13,7 +13,7 @@ const Widget6: React.FC<Widget6Props> = ({
   amount,
 }: Widget6Props) => {
   return (
-    <div className="py-[25px] px-[25px] h-full lg:max-w-xs border-2 border-zinc-100 bg-white rounded-xl flex flex-row lg:flex-col justify-between">
+    <div className="py-[25px] px-[25px] h-full w-full border-2 border-zinc-100 bg-white rounded-xl flex flex-row lg:flex-col justify-between">
       <Image src={iconSrc} width={63} height={63} alt="Icon" />
       <div className="mt-9">
         <p className="text-[14px] text-[#9CA3AF] font-light mb-6">

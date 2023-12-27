@@ -13,7 +13,7 @@ const Widget5: React.FC<Widget5Props> = ({
   date,
 }: Widget5Props) => {
   return (
-    <div className="py-[25px] px-[25px] border-2 lg:max-w-md border-zinc-100 bg-white rounded-xl w-full flex items-center justify-between">
+    <div className="py-[25px] px-[25px] border-2 border-zinc-100 bg-white rounded-xl w-full flex items-center justify-between">
       <div className="flex items-center">
         <Image src={iconSrc} width={63} height={63} alt="Icon" />
         <h5 className="ml-5 text-[14px] text-gray-950 font-medium max-w-[157px]">

@@ -16,7 +16,7 @@ const Widget4: React.FC<Widget4Props> = ({
   age,
 }: Widget4Props) => {
   return (
-    <div className="py-[32px] px-[25px] border-2 border-zinc-100 bg-white rounded-xl w-full lg:max-w-md flex items-center justify-between">
+    <div className="py-[32px] px-[25px] border-2 border-zinc-100 bg-white rounded-xl w-full flex items-center justify-between">
       <div className="flex items-center">
         <Image
           src={avatarSrc}
