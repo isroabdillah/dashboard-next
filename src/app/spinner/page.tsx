@@ -53,7 +53,7 @@ export default function Spinner() {
             <div id="design">
               <div className="flex lg:flex-row lg:space-y-0 space-y-4 flex-col mt-4">
                 <div className="lg:w-4/12 md:w-full h-100 p-2 flex justify-center mt-4 rounded-xl border-2 border-zinc-100">
-                  <Spinners size={50} color="#FF5959;" />
+                  <Spinners size={50} color="#FF5959"/>
                 </div>
               </div>
             </div>
